@@ -1,3 +1,4 @@
+import React from "react";
 import BlogPreviewItem from "./BlogPreviewItem";
 
 const electronicsBlogs = [

@@ -1,4 +1,5 @@
-import Link from "next/link";
+import React from "react";
+import { Link } from "react-router-dom";
 
 export default function MainNav() {
   return (
@@ -7,17 +8,17 @@ export default function MainNav() {
         <div
           className={`px-2 md:min-w-[600px] max-w-[600px] mx-auto flex justify-between items-center h-[40px]`}
         >
-          <Link href="/" className="text-sm">
+          <Link to="/" className="text-sm">
             Eduardo Garza
           </Link>
           <div className="flex">
-            <Link href="/hardware" className="hover:underline text-sm mx-2">
+            <Link to="/hardware" className="hover:underline text-sm mx-2">
               Hardware
             </Link>
-            <Link href="/software" className="hover:underline text-sm mx-2">
+            <Link to="/software" className="hover:underline text-sm mx-2">
               Software
             </Link>
-            <Link href="/about" className="hover:underline text-sm mx-2">
+            <Link to="/about" className="hover:underline text-sm mx-2">
               About
             </Link>
           </div>
