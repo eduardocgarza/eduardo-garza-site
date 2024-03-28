@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Software from "../pages/Software";
 import Hardware from "../pages/Hardware";
 import About from "../pages/About";
+import BlogItem from "../pages/BlogItem";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,14 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <About />,
+  },
+  {
+    path: "/blog/:slug",
+    element: <BlogItem />,
+  },
+  {
+    path: "*",
+    element: <div>404 Not Found</div>,
   },
 ]);
 
