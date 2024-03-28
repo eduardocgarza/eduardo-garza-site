@@ -9,7 +9,7 @@ export default function SectionItem(props) {
       <h2 className="text-lg font-medium mb-2">{props.title}</h2>
       <section>
         {blogs && blogs.map((blog) => (
-          <BlogPreviewItem key={blog.id} blog={blog} />
+          <BlogPreviewItem key={blog.slug} blog={blog} />
         ))}
       </section>
       <footer className="flex justify-center items-center">
