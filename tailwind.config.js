@@ -12,6 +12,5 @@ module.exports = {
         kalam: ["Kalam", "sans-serif"],
       },
     },
-  },
-  plugins: [require("@tailwindcss/custom-forms")],
+  }
 };
