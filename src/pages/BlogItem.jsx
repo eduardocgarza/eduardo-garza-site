@@ -29,7 +29,7 @@ export default function BlogItem() {
     };
 
     fetchBlogContent();
-  }, [slug]);
+  }, []);
 
   if (!blog) {
     return <RootLayout>Loading...</RootLayout>;
