@@ -6,6 +6,9 @@ import { ALL_BLOGS } from '../constants/ALL_BLOGS';
 export default function HomePage() {
   const softwareBlogs = ALL_BLOGS.filter(blog => blog.type === "software");
   const hardwareBlogs = ALL_BLOGS.filter(blog => blog.type === "hardware");
+
+  console.log("New Home")
+
     
   return (
     <RootLayout>

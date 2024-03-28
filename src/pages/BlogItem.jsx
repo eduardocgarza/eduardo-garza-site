@@ -11,6 +11,8 @@ export default function BlogItem() {
   const [blog, setBlog] = useState(null);
   const [blogMetadata, setBlogMetadata] = useState(null);
 
+  console.log("New")
+
   useEffect(() => {
     const blogObject = ALL_BLOGS.find(blog => blog.slug === slug);
     setBlogMetadata(blogObject);
