@@ -1,10 +1,10 @@
 import React from "react";
-import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import styled from "styled-components"
 import ReactMarkdown from 'react-markdown';
 import RootLayout from '../components/RootLayout';
-import { ALL_BLOGS } from '../data/ALL_BLOGS';
-import styled from "styled-components"
+import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { ALL_BLOGS } from '../constants/ALL_BLOGS';
 
 export default function BlogItem() {
   const { slug } = useParams();
@@ -16,9 +16,11 @@ export default function BlogItem() {
     setBlogMetadata(blogObject);
 
     const fileName = blogObject.fileName;
-    const fullPath = `../data/content/${fileName}`
+    const fullPath = `/content/${fileName}`
     
     import(fullPath)
+    // Suppress Vite warning for dynamic import
+    // /* @vite-ignore */
       .then(res => {
         fetch(res.default)
         .then(res => res.text())
