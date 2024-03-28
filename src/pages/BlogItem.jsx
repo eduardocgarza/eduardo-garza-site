@@ -18,18 +18,23 @@ export default function BlogItem() {
     setBlogMetadata(blogObject);
 
     const fileName = blogObject.fileName;
-    const fullPath = `/content/${fileName}`
+    const fullPath = `../../public/content/${fileName}`
     
     import(fullPath)
     // Suppress Vite warning for dynamic import
+    // https://github.com/rollup/plugins/tree/master/packages/dynamic-import-vars#limitations
     // /* @vite-ignore */
       .then(res => {
         fetch(res.default)
         .then(res => res.text())
         .then(markdownAsText => setBlog(markdownAsText))
       })
-  })
-  
+      .catch(err => {
+          console.log("------")
+          console.error(err)
+          console.log("------")
+      });
+  }, [slug])
 
   if (!blog) {
     return <RootLayout>Loading...</RootLayout>;
