@@ -1,40 +1,35 @@
 import React from "react";
-import styled from "styled-components"
-import ReactMarkdown from 'react-markdown';
-import RootLayout from '../components/RootLayout';
-import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import { ALL_BLOGS } from '../constants/ALL_BLOGS';
+import styled from "styled-components";
+import ReactMarkdown from "react-markdown";
+import RootLayout from "../components/RootLayout";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { ALL_BLOGS } from "../constants/ALL_BLOGS";
 
 export default function BlogItem() {
   const { slug } = useParams();
   const [blog, setBlog] = useState(null);
   const [blogMetadata, setBlogMetadata] = useState(null);
 
-  console.log("New")
+  console.log("New");
 
   useEffect(() => {
-    const blogObject = ALL_BLOGS.find(blog => blog.slug === slug);
-    setBlogMetadata(blogObject);
+    const fetchBlogContent = async () => {
+      const blogObject = ALL_BLOGS.find((blog) => blog.slug === slug);
+      const fileName = blogObject.fileName;
 
-    const fileName = blogObject.fileName;
-    const fullPath = `../../public/content/${fileName}`
-    
-    import(fullPath)
-    // Suppress Vite warning for dynamic import
-    // https://github.com/rollup/plugins/tree/master/packages/dynamic-import-vars#limitations
-    // /* @vite-ignore */
-      .then(res => {
-        fetch(res.default)
-        .then(res => res.text())
-        .then(markdownAsText => setBlog(markdownAsText))
-      })
-      .catch(err => {
-          console.log("------")
-          console.error(err)
-          console.log("------")
-      });
-  }, [slug])
+      // Dynamically import the markdown file
+      const markdownFile = await import(`../constants/content/${fileName}`);
+      
+      // Read the content from the imported markdown file
+      const response = await fetch(markdownFile.default);
+      const markdownContent = await response.text();
+      
+      setBlog(markdownContent);
+    };
+
+    fetchBlogContent();
+  }, [slug]);
 
   if (!blog) {
     return <RootLayout>Loading...</RootLayout>;
@@ -42,7 +37,7 @@ export default function BlogItem() {
 
   const MarkdownWrapper = styled.div`
     padding-top: 40px;
-  
+
     > * {
       font-size: 13px;
       line-height: 1.8;
@@ -54,7 +49,6 @@ export default function BlogItem() {
       font-weight: bold;
     }
   `;
-
 
   return (
     <RootLayout>
