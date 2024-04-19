@@ -21,6 +21,9 @@ export default function MainNav() {
               <a href="https://eduardocgarza.webflow.io" target="_blank" rel="noreferrer" className="hover:underline text-sm mx-2">
               About
             </a>
+            <a href="https://drive.google.com/file/d/1PnZSGKjbLYKPW0RnICMgvbgh--lnUQGN/view?usp=sharing" target="_blank" rel="noreferrer" className="hover:underline text-sm mx-2">
+              Resume
+            </a>
           </div>
         </div>
       </nav>
