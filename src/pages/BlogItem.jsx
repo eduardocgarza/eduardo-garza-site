@@ -48,12 +48,28 @@ export default function BlogItem() {
     > * {
       font-size: 13px;
       line-height: 1.8;
-      margin-bottom: 20px;
     }
 
-    h1 {
-      font-size: 15px;
+    br {
+      padding-bottom: 20px;
+    }
+
+    h1,h2,h3,h4,h5,h6 {
       font-weight: bold;
+    }
+    
+    h1 { font-size: 17px; }
+    h2 { font-size: 16px; }
+    h3 { font-size: 15px; }
+    h4 { font-size: 14px; }
+
+    ol {
+      list-style-type: decimal;
+      padding-left: 20px;
+    }
+    ul li {
+      list-style-type: disc;
+      padding-left: 20px;
     }
   `;
 

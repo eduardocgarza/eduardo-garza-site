@@ -1,24 +1,28 @@
 import React from "react";
-import SectionItem from "../components/Home/SectionItem";
 import RootLayout from "../components/RootLayout";
-import { ALL_BLOGS } from '../constants/ALL_BLOGS';
+import SectionItem from "../components/Home/SectionItem";
+import { ALL_BLOGS, CATEGORIES } from '../constants/ALL_BLOGS';
 
 export default function HomePage() {
-  const softwareBlogs = ALL_BLOGS.filter(blog => blog.type === "software");
-  const hardwareBlogs = ALL_BLOGS.filter(blog => blog.type === "hardware");
+  const getBlogs = (categorySlug) => ALL_BLOGS.filter(blog => blog.category === categorySlug);
 
-  console.log("New Home")
+  const softwareBlogs = getBlogs(CATEGORIES.SOFTWARE.categorySlug)
+  const hardwareBlogs = getBlogs(CATEGORIES.HARDWARE.categorySlug)
+  const hardwareManufacturingBlogs = getBlogs(CATEGORIES.HARDWARE_MANUFACTURING.categorySlug)
 
-    
   return (
     <RootLayout>
       <SectionItem 
-        title="Software" 
+        title={CATEGORIES.SOFTWARE.categoryName}
         blogs={softwareBlogs} 
       />
       <SectionItem 
         title="Hardware" 
         blogs={hardwareBlogs} 
+      />
+      <SectionItem
+        title="PCB Manufacturing"
+        blogs={hardwareManufacturingBlogs}
       />
     </RootLayout>
   );
