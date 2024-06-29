@@ -1,31 +1,26 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "../pages/Home";
-import Software from "../pages/Software";
-import Hardware from "../pages/Hardware";
-import About from "../pages/About";
-import BlogItem from "../pages/BlogItem";
+import HomePage from "../pages/Home/HomePage";
+import AboutPage from "../pages/About/AboutPage";
+import WritingsPage from "../pages/Writings/WritingsPage";
+import ProjectsPage from "../pages/Projects/ProjectsPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/software",
-    element: <Software />,
-  },
-  {
-    path: "/hardware",
-    element: <Hardware />,
+    element: <HomePage />,
   },
   {
     path: "/about",
-    element: <About />,
+    element: <AboutPage />,
   },
   {
-    path: "/blog/:slug",
-    element: <BlogItem />,
+    path: "/writings",
+    element: <WritingsPage />,
+  },
+  {
+    path: "/projects",
+    element: <ProjectsPage />,
   },
   {
     path: "*",
