@@ -5,8 +5,11 @@ import {
   WEB_APP_ARCHITECTURE_BLOGS,
 } from "../../../constants/blogs/software/architectureBlogs";
 import {
-  DATABASE_BLOGS,
-  PRACTICAL_DATABASE_BLOGS,
+  DATABASE_THEORY_BLOGS,
+  MEMORY_DATABASE_THEORY_BLOGS,
+  NO_SQL_DATABASE_THEORY_BLOGS,
+  PRACTICAL_DATABASE_THEORY_BLOGS,
+  RELATIONAL_DATABASE_THEORY_BLOGS,
 } from "../../../constants/blogs/software/databaseBlogs";
 import { REACT_BLOGS } from "../../../constants/blogs/software/frontEndBlogs";
 import {
@@ -66,12 +69,20 @@ export default function SoftwareBlogs() {
   ];
   const databaseCategories = [
     {
-      title: "Database Theory",
-      blogs: DATABASE_BLOGS,
+      title: "Database Design",
+      blogs: DATABASE_THEORY_BLOGS,
     },
     {
-      title: "Practical Databases",
-      blogs: PRACTICAL_DATABASE_BLOGS,
+      title: "Relational Databases",
+      blogs: RELATIONAL_DATABASE_THEORY_BLOGS
+    },
+    {
+      title: "NoSQL Databases",
+      blogs: NO_SQL_DATABASE_THEORY_BLOGS
+    },
+    {
+      title: "Memory Databases",
+      blogs: MEMORY_DATABASE_THEORY_BLOGS
     },
   ];
 

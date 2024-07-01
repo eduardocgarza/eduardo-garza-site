@@ -1,12 +1,6 @@
 import { BLOG_CATEGORIES } from "../../blogCategories";
 
-
-export const PRACTICAL_DATABASE_BLOGS = [
-  { 
-    title: "Modern Database Options", 
-    category: BLOG_CATEGORIES.DATABASES,
-    url: "https://j2k8zv.substack.com/p/modern-database-options",
-  },  
+export const RELATIONAL_DATABASE_THEORY_BLOGS = [
   {
     title: "Learn MySQL - Top and Common Commands to Get Started",
     category: BLOG_CATEGORIES.DATABASES,
@@ -22,6 +16,9 @@ export const PRACTICAL_DATABASE_BLOGS = [
     category: BLOG_CATEGORIES.DATABASES,
     url: "https://j2k8zv.substack.com/p/learn-sqlite-top-and-common-commands",
   },
+];
+
+export const NO_SQL_DATABASE_THEORY_BLOGS = [
   {
     title: "Learn MongoDB - Top and Common Commands to Get Started",
     category: BLOG_CATEGORIES.DATABASES,
@@ -33,19 +30,9 @@ export const PRACTICAL_DATABASE_BLOGS = [
     url: "https://j2k8zv.substack.com/p/learn-firebase-and-firestore-top",
   },
   {
-    title: "Learn Redis - Top and Common Commands to Get Started",
-    category: BLOG_CATEGORIES.DATABASES,
-    url: "https://j2k8zv.substack.com/p/learn-redis-top-and-common-commands",
-  },
-  {
-    title: "Learn Memcached - Top and Common Commands to Get Started",
-    category: BLOG_CATEGORIES.DATABASES,
-    url: "https://j2k8zv.substack.com/p/learn-memcached-top-and-common-commands",
-  },
-  {
     title: "Learn Supabase - Top and Common Commands to Get Started",
     category: BLOG_CATEGORIES.DATABASES,
-    url: "https://j2k8zv.substack.com/p/learn-supabase-top-and-common-commands",
+    url: "https://j2k8zv.substack.com/p/learn-firebase-and-firestore-top",
   },
   {
     title: "Learn Cassandra - Top and Common Commands to Get Started",
@@ -56,11 +43,24 @@ export const PRACTICAL_DATABASE_BLOGS = [
     title: "Learn Neo4j - Top and Common Commands to Get Started",
     category: BLOG_CATEGORIES.DATABASES,
     url: "https://j2k8zv.substack.com/p/learn-neo4j-top-and-common-commands",
+  }
+];
+
+export const MEMORY_DATABASE_THEORY_BLOGS = [
+  {
+    title: "Learn Redis - Top and Common Commands to Get Started",
+    category: BLOG_CATEGORIES.DATABASES,
+    url: "https://j2k8zv.substack.com/p/learn-redis-top-and-common-commands",
+  },
+  {
+    title: "Learn Memcached - Top and Common Commands to Get Started",
+    category: BLOG_CATEGORIES.DATABASES,
+    url: "https://j2k8zv.substack.com/p/learn-memcached-top-and-common-commands",
   },
 ]
 
 
-export const DATABASE_BLOGS = [
+export const DATABASE_THEORY_BLOGS = [
   {
     title: "A Beginner's Introduction to Professional Database Design",
     category: BLOG_CATEGORIES.DATABASES,

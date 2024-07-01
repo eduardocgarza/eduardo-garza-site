@@ -3,7 +3,7 @@ import BlogPreviewItem from "./BlogPreviewItem";
 import { REACT_BLOGS } from "../../constants/blogs/frontEndBlogs";
 import { NODE_BLOGS, PYTHON_BLOGS } from "../../constants/blogs/backEndBlogs";
 import { ARCHITECTURE_BLOGS } from "../../constants/blogs/architectureBlogs";
-import { DATABASE_BLOGS } from "../../constants/blogs/databaseBlogs";
+import { DATABASE_THEORY_BLOGS } from "../../constants/blogs/databaseBlogs";
 
 function HeaderButton(props) {
   const { title, blogType, blogState, setState } = props;
@@ -102,7 +102,7 @@ export default function SectionItem(props) {
 
       <section className="mb-6">
         <SectionBadge title="Database" />
-        {DATABASE_BLOGS.map((blog) => (
+        {DATABASE_THEORY_BLOGS.map((blog) => (
           <BlogPreviewItem key={blog.slug} blog={blog} />
         ))}
       </section>
