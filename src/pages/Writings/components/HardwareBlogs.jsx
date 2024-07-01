@@ -1,5 +1,5 @@
 import SectionItem from "./SectionItem";
-import { BEGINNER_CIRCUIT_THEORY } from "../../../constants/blogs/hardware/analogElectronicsBlogs";
+import { BEGINNER_CIRCUIT_THEORY } from "../../../constants/blogs/hardware/circuitTheoryBlogs";
 import {
   HARDWARE_EQUIPMENT_BLOGS,
   HARDWARE_INDUSTRY_BLOGS,

@@ -37,6 +37,26 @@ export const PRACTICAL_DATABASE_BLOGS = [
     category: BLOG_CATEGORIES.DATABASES,
     url: "https://j2k8zv.substack.com/p/learn-redis-top-and-common-commands",
   },
+  {
+    title: "Learn Memcached - Top and Common Commands to Get Started",
+    category: BLOG_CATEGORIES.DATABASES,
+    url: "https://j2k8zv.substack.com/p/learn-memcached-top-and-common-commands",
+  },
+  {
+    title: "Learn Supabase - Top and Common Commands to Get Started",
+    category: BLOG_CATEGORIES.DATABASES,
+    url: "https://j2k8zv.substack.com/p/learn-supabase-top-and-common-commands",
+  },
+  {
+    title: "Learn Cassandra - Top and Common Commands to Get Started",
+    category: BLOG_CATEGORIES.DATABASES,
+    url: "https://j2k8zv.substack.com/p/learn-cassandra-top-and-common-commands",
+  },
+  {
+    title: "Learn Neo4j - Top and Common Commands to Get Started",
+    category: BLOG_CATEGORIES.DATABASES,
+    url: "https://j2k8zv.substack.com/p/learn-neo4j-top-and-common-commands",
+  },
 ]
 
 
