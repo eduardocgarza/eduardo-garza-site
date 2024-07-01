@@ -19,31 +19,31 @@ export const RELATIONAL_DATABASE_THEORY_BLOGS = [
 ];
 
 export const NO_SQL_DATABASE_THEORY_BLOGS = [
-  {
-    title: "Learn MongoDB - Top and Common Commands to Get Started",
-    category: BLOG_CATEGORIES.DATABASES,
-    url: "https://j2k8zv.substack.com/p/learn-mongodb-top-and-common-commands",
-  },
-  {
-    title: "Learn Firebase and Firestore - Top and Common Commands to Get Started",
-    category: BLOG_CATEGORIES.DATABASES,
-    url: "https://j2k8zv.substack.com/p/learn-firebase-and-firestore-top",
-  },
-  {
-    title: "Learn Supabase - Top and Common Commands to Get Started",
-    category: BLOG_CATEGORIES.DATABASES,
-    url: "https://j2k8zv.substack.com/p/learn-firebase-and-firestore-top",
-  },
-  {
-    title: "Learn Cassandra - Top and Common Commands to Get Started",
-    category: BLOG_CATEGORIES.DATABASES,
-    url: "https://j2k8zv.substack.com/p/learn-cassandra-top-and-common-commands",
-  },
-  {
-    title: "Learn Neo4j - Top and Common Commands to Get Started",
-    category: BLOG_CATEGORIES.DATABASES,
-    url: "https://j2k8zv.substack.com/p/learn-neo4j-top-and-common-commands",
-  }
+  // {
+  //   title: "Learn MongoDB - Top and Common Commands to Get Started",
+  //   category: BLOG_CATEGORIES.DATABASES,
+  //   url: "https://j2k8zv.substack.com/p/learn-mongodb-top-and-common-commands",
+  // },
+  // {
+  //   title: "Learn Firebase and Firestore - Top and Common Commands to Get Started",
+  //   category: BLOG_CATEGORIES.DATABASES,
+  //   url: "https://j2k8zv.substack.com/p/learn-firebase-and-firestore-top",
+  // },
+  // {
+  //   title: "Learn Supabase - Top and Common Commands to Get Started",
+  //   category: BLOG_CATEGORIES.DATABASES,
+  //   url: "https://j2k8zv.substack.com/p/learn-firebase-and-firestore-top",
+  // },
+  // {
+  //   title: "Learn Cassandra - Top and Common Commands to Get Started",
+  //   category: BLOG_CATEGORIES.DATABASES,
+  //   url: "https://j2k8zv.substack.com/p/learn-cassandra-top-and-common-commands",
+  // },
+  // {
+  //   title: "Learn Neo4j - Top and Common Commands to Get Started",
+  //   category: BLOG_CATEGORIES.DATABASES,
+  //   url: "https://j2k8zv.substack.com/p/learn-neo4j-top-and-common-commands",
+  // }
 ];
 
 export const MEMORY_DATABASE_THEORY_BLOGS = [
