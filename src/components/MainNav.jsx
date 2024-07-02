@@ -26,9 +26,17 @@ export default function MainNav() {
             <Link to="/writings" className="hover:underline text-xs mx-2">
               Writings
             </Link>
-            <Link to="/projects" className="hover:underline text-xs mx-2">
+            {/* <Link to="/projects" className="hover:underline text-xs mx-2">
               Projects
-            </Link>
+            </Link> */}
+            <a
+              href="https://eduardocgarza.webflow.io"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:underline text-xs mx-2"
+            >
+              Projects
+            </a>
           </div>
         </div>
       </nav>

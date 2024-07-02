@@ -14,7 +14,7 @@ export default function WritingsPage(props) {
   return (
     <RootLayout>
       <section className="mt-4 mb-8">
-        <WritingsHeader blogActive={blogActive} setBlogActive={setBlogActive} />
+        {/* <WritingsHeader blogActive={blogActive} setBlogActive={setBlogActive} /> */}
         {blogActive === SUBSTACK_BLOGS.SOFTWARE.blogType && <SoftwareBlogs />}
         {blogActive === SUBSTACK_BLOGS.HARDWARE.blogType && <HardwareBlogs />}
         <footer className="flex justify-center items-center">

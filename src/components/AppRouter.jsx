@@ -8,7 +8,8 @@ import ProjectsPage from "../pages/Projects/ProjectsPage";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />,
+    // element: <HomePage />,
+    element: <AboutPage />,
   },
   {
     path: "/about",
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <div>404 Not Found</div>,
+    element: <AboutPage />,
   },
 ]);
 
