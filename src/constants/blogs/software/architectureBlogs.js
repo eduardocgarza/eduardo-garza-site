@@ -30,16 +30,16 @@ export const API_ARCHITECTURE_BLOGS = [
     category: BLOG_CATEGORIES.ARCHITECTURE,
     url: "https://j2k8zv.substack.com/p/best-clean-code-patterns-to-use-everyday-73b",
   },
-  {
-    title: "Architecture Design for Logging and Monitoring Systems",
-    category: BLOG_CATEGORIES.ARCHITECTURE,
-    url: "https://j2k8zv.substack.com/p/architecture-design-for-logging-and",
-  },
-  { 
-    title: "Architecture Design for API Webhooks", 
-    category: BLOG_CATEGORIES.ARCHITECTURE,
-    url: "https://j2k8zv.substack.com/p/architecture-design-for-api-webhooks",
-  },
+  // {
+  //   title: "Architecture Design for Logging and Monitoring Systems",
+  //   category: BLOG_CATEGORIES.ARCHITECTURE,
+  //   url: "https://j2k8zv.substack.com/p/architecture-design-for-logging-and",
+  // },
+  // { 
+  //   title: "Architecture Design for API Webhooks", 
+  //   category: BLOG_CATEGORIES.ARCHITECTURE,
+  //   url: "https://j2k8zv.substack.com/p/architecture-design-for-api-webhooks",
+  // },
 ]
 
 export const TESTING_ARCHITECTURE_BLOGS = [
