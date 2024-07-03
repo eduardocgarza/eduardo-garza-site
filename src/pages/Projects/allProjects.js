@@ -110,8 +110,8 @@ export const ALL_PROJECTS = [
       "YouTube API",
     ],
     extendedDescription: "A web app search platform of the top piano performers and content creators on Youtube.",
-    repositoryURL: "https://mozartpianos.com",
-    demoURL: "",
+    repositoryURL: "",
+    demoURL: "https://mozartpianos.com",
     videoURL: "",
   },
   {
