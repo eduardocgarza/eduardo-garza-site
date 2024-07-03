@@ -16,7 +16,7 @@ export default function MainNav() {
               About
             </Link>
             <a
-              href="https://drive.google.com/file/d/1PnZSGKjbLYKPW0RnICMgvbgh--lnUQGN/view?usp=sharing"
+              href="https://drive.google.com/file/d/1nYFqI4maacC6NRQ4zQQzUVDBcajKikPM/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
               className="hover:underline text-xs mx-2"
