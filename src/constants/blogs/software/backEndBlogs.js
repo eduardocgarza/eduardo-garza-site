@@ -3,7 +3,7 @@ import { BLOG_CATEGORIES } from "../../blogCategories";
 
 export const NODE_BLOGS = [
   { 
-    title: "Reusable Node Code Blocks for Super Fast API Development - Part 1", 
+    title: "Node in Blocks, Part 1 - Introduction", 
     category: BLOG_CATEGORIES.BACK_END,
     url: "https://j2k8zv.substack.com/p/reusable-node-code-modules-for-super",
   },
@@ -76,7 +76,7 @@ export const NODE_BLOGS = [
 
 export const PYTHON_BLOGS = [
   { 
-    title: "Reusable Python Code Blocks for Super Fast API Development - Part 1", 
+    title: "Python in Blocks, Part 1 - Introduction", 
     category: "Back-End",
     url: "https://j2k8zv.substack.com/p/reusable-python-code-modules-for",
   },
