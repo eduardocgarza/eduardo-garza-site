@@ -2,7 +2,7 @@ import { BLOG_CATEGORIES } from "../../blogCategories";
 
 export const REACT_BLOGS = [
   { 
-    title: "React in Blocks - Part 1", 
+    title: "React in Blocks, Part 1 - Introduction", 
     category: BLOG_CATEGORIES.FRONT_END,
     url: "https://j2k8zv.substack.com/p/reusable-react-code-blocks-for-super",
   },
