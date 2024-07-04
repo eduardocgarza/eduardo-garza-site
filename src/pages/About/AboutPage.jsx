@@ -7,7 +7,7 @@ export default function AboutPage() {
     "Live in Vancouver, Canada",
     "Bachelor's Degree in Computer Science & Business from UBC (2015-2020)",
     "Currently working as a Software Engineer at Spring Financial (2023 - Present)",
-    "Senior Full-Stack Software Engineer with 5+ years of experience",
+    "Senior Full-Stack Software Engineer with 10+ years of experience",
     "Managerial and operations experience from the manufacturing industry",
     "Expert using React, Python, Node, MySQL, Postgres, Docker, and AWS",
     "Also experienced with TypeScript, MongoDB, Redis, Firebase/Firestore, Heroku",
