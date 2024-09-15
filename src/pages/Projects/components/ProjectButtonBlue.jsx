@@ -1,4 +1,4 @@
-import codeButton from "../../../../src/assets/icons/icon-code.png";
+import playButton from "../../../../src/assets/icons/icon-play.png";
 
 export default function ProjectButtonBlue(props) {
   const { url } = props;
@@ -10,7 +10,7 @@ export default function ProjectButtonBlue(props) {
       rel="noreferrer"
       target="_blank"
     >
-      <img src={codeButton} alt="" className="block w-[15px] h-[15px] mr-2" />
+      <img src={playButton} alt="" className="block w-[15px] h-[15px] mr-2" />
       <span>Try demo</span>
     </a>
   );

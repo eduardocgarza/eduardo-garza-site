@@ -48,7 +48,7 @@ export default function ProjectItem(props) {
             ))}
           </section>
           <section className="mb-4 text-center md:text-left">
-            <p className="text-gray-900 leading-[22px] text-xs">
+            <p className="text-gray-900 leading-[26px] text-[14px]">
               {extendedDescription}
             </p>
           </section>

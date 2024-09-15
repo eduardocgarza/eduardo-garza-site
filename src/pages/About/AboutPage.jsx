@@ -1,39 +1,76 @@
 import React from "react";
 import RootLayout from "../../components/RootLayout";
+import { RESUME_URL } from "../../components/MainNav";
 
 export default function AboutPage() {
   const aboutMe = [
     "Born in Monterrey, Mexico",
     "Live in Vancouver, Canada",
     "Bachelor's Degree in Computer Science & Business from UBC (2015-2020)",
-    "Currently working as a Software Engineer at Spring Financial (2023 - Present)",
+    "Fluent in English and Spanish; also speak French and Italian",
+    "Love to read political philosophy, economic theory, and fintech",
+    "20 years of playing the piano",
+  ];
+
+  const workExperience = [
+    "Software Engineer at Spring Financial (2023 to Present)",
     "Senior Full-Stack Software Engineer with 10+ years of experience",
     "Managerial and operations experience from the manufacturing industry",
+  ];
+  const skills = [
     "Expert using React, Python, Node, MySQL, Postgres, Docker, and AWS",
-    "Also experienced with TypeScript, MongoDB, Redis, Firebase/Firestore, Heroku",
+    "Proficient in TypeScript, MongoDB, Redis, Firebase/Firestore, Heroku",
   ];
 
   return (
     <RootLayout>
-      <section className="mt-20 mb-6">
-        <h1 className="text-3xl font-semibold mb-6">About Me</h1>
-        {aboutMe.map((item, index) => (
-          <li className="text-gray-900 mt-2 leading-[20px] text-xs" key={index}>
-            {item}
-          </li>
-        ))}
-      </section>
-      <section className="mb-6">
-        <h2 className="text-xl font-semibold mb-4">Work Experience</h2>
-        <p className="text-gray-900 mt-2 text-xs italic mb-2">
-          See my full work experience on LinkedIn
-        </p>
-        <a
-          className="text-xs text-blue-600 underline hover:text-blue:800"
-          href="https://www.linkedin.com/in/eduardocgarza"
-        >
-          LinkedIn - Eduardo Garza
-        </a>
+      <section className="py-20">
+        <section className="mb-10">
+          <h2 className="font-libreBaskerville text-[28px] mb-4">About</h2>
+          {aboutMe.map((item, index) => (
+            <li className="text-gray-900 mt-2 mb-3 text-[13px]" key={index}>
+              {item}
+            </li>
+          ))}
+        </section>
+        <section className="mb-10">
+          <h2 className="font-libreBaskerville text-[28px] mb-4">Work</h2>
+          <p className="text-gray-900 mt-2 text-[13px] mb-4">
+            Full work experience on{" "}
+            <a
+              href="https://www.linkedin.com/in/eduardocgarza"
+              className="text-xs text-blue-600 underline hover:text-blue:800"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+          </p>
+          {workExperience.map((item, index) => (
+            <li className="text-gray-900 mt-2 mb-3 text-[13px]" key={index}>
+              {item}
+            </li>
+          ))}
+        </section>
+        <section className="mb-10">
+          <h2 className="font-libreBaskerville text-[28px] mb-4">Skills</h2>
+          <p className="text-gray-900 mt-2 text-[13px] mb-4">
+            All skills on {" "}
+            <a
+              href={RESUME_URL}
+              className="text-xs text-blue-600 underline hover:text-blue:800"
+              target="_blank"
+              rel="noreferrer"
+            >
+              resume
+            </a>
+          </p>
+          {skills.map((item, index) => (
+            <li className="text-gray-900 mt-2 mb-3 text-[13px]" key={index}>
+              {item}
+            </li>
+          ))}
+        </section>
       </section>
     </RootLayout>
   );

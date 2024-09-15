@@ -7,15 +7,10 @@ import ProjectsPage from "../pages/Projects/ProjectsPage";
 const router = createBrowserRouter([
   {
     path: "/",
-    // element: <HomePage />,
     element: <AboutPage />,
   },
   {
-    path: "/about",
-    element: <AboutPage />,
-  },
-  {
-    path: "/writings",
+    path: "/blog",
     element: <WritingsPage />,
   },
   {
