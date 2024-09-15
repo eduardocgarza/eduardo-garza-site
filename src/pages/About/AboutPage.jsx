@@ -5,16 +5,17 @@ import { RESUME_URL } from "../../components/MainNav";
 export default function AboutPage() {
   const aboutMe = [
     "Born in Monterrey, Mexico",
-    "Live in Vancouver, Canada",
-    "Bachelor's Degree in Computer Science & Business from UBC (2015-2020)",
+    "Live in Vancouver, Canada (2004-present)",
+    "UBC Vancouver: Bachelor's degree, Computer Science & Business (2015-2020)",
     "Fluent in English and Spanish; also speak French and Italian",
-    "Love to read political philosophy, economic theory, and fintech",
+    "Love to read political philosophy, economic theory, and fin-tech news",
     "20 years of playing the piano",
   ];
 
   const workExperience = [
-    "Software Engineer at Spring Financial (2023 to Present)",
-    "Senior Full-Stack Software Engineer with 10+ years of experience",
+    "Software Engineer at Spring Financial (2023-present)",
+    "Software Engineer Contractor from 2016-2020",
+    "Senior Full-Stack Software Engineer with 5 years of professional experience",
     "Managerial and operations experience from the manufacturing industry",
   ];
   const skills = [
