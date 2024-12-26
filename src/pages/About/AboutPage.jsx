@@ -6,21 +6,24 @@ export default function AboutPage() {
   const aboutMe = [
     "Born in Monterrey, Mexico",
     "Live in Vancouver, Canada (2004-present)",
-    "UBC Vancouver: Bachelor's degree, Computer Science & Business (2015-2020)",
-    "Fluent in English and Spanish; also speak French and Italian",
-    "Love to read political philosophy, economic theory, and fin-tech news",
+    "UBC Vancouver: Dual-degree in computer science & business (2015-2020)",
+    "Speak English, Spanish, French, Italian",
     "20 years of playing the piano",
   ];
 
   const workExperience = [
-    "Software Engineer at Spring Financial (2023-present)",
-    "Software Engineer Contractor from 2016-2020",
-    "Senior Full-Stack Software Engineer with 5 years of professional experience",
-    "Managerial and operations experience from the manufacturing industry",
+    "Software Engineer @ Spring Financial (2023 - present)",
+    "Founder & AI Instructor @ Emerson Academy (2023 - present)",
+    "Founder @ Mozart (2020 - 2024)",
+    "Lead Manufacturing Consultant @ Gintarini (2022 - 2023)",
+    "Software Engineer Contractor (2016-2020)",
   ];
   const skills = [
-    "Expert using React, Python, Node, MySQL, Postgres, Docker, and AWS",
-    "Proficient in TypeScript, MongoDB, Redis, Firebase/Firestore, Heroku",
+    "Senior Full-Stack Web Software Engineer",
+    "Front-End: React, Next, Tanstack",
+    "Back-End: Node, Express, Python, Flask",
+    "Dev-Ops: Docker, Kubernetes, AWS, Heroku",
+    "Databases: PostgreSQL, MySQL, MongoDB, Redis, Supabase, Firebase/Firestore",
   ];
 
   return (

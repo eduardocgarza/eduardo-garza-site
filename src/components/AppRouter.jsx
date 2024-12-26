@@ -9,10 +9,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <AboutPage />,
   },
-  {
-    path: "/publications",
-    element: <WritingsPage />,
-  },
+  // {
+  //   path: "/publications",
+  //   element: <WritingsPage />,
+  // },
   {
     path: "/projects",
     element: <ProjectsPage />,
