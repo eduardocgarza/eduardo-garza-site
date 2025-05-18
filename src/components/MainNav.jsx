@@ -30,9 +30,9 @@ export default function MainNav() {
             <Link to="/projects" className="hover:underline text-sm ml-6">
               Projects
             </Link>
-            {/* <Link to="/publications" className="hover:underline text-sm ml-6">
+            <Link to="/publications" className="hover:underline text-sm ml-6">
               Writings
-            </Link> */}
+            </Link>
             <a
               href={RESUME_URL}
               target="_blank"
