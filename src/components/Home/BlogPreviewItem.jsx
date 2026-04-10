@@ -10,7 +10,7 @@ export default function BlogPreviewItem(props) {
       target="_blank"
       className="block mb-1 border-l-2 border-black pl-2 my-2 hover:underline hover:border-yellow-500 transition duration-300 ease-in-out"
     >
-      <h2 className="text-xs">{blog.title}</h2>
+      <h2 className="text-[15px] text-gray-900">{blog.title}</h2>
     </a>
   );
 }
