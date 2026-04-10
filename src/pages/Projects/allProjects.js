@@ -1,14 +1,26 @@
 import commaIcon from "../../assets/projects/commaai.jpg";
-import emersonIcon from "../../assets/projects/emerson.jpg";
+import lucyLogo from "../../assets/projects/lucyLogo.png";
 import mozartIcon from "../../assets/projects/mozart.jpg";
+import emersonIcon from "../../assets/projects/emerson.jpg";
 import copyPandaIcon from "../../assets/projects/copypanda.png";
-import recruitFruitIcon from "../../assets/projects/recruitfruit.png";
 import shakesearchIcon from "../../assets/projects/shakespeare.jpg";
+import recruitFruitIcon from "../../assets/projects/recruitfruit.png";
 import jobBoardsDataScraperIcon from "../../assets/projects/recruitment.png";
 import universityFriendsMatcherIcon from "../../assets/projects/spotify.png";
 import creativeChroniclesIcon from "../../assets/projects/creativechronicles.png";
 
 export const ALL_PROJECTS = [
+  {
+    title: "Lucy’s Circle",
+    description: "Childcare discovery and marketplace platform",
+    imagePath: lucyLogo,
+    tools: ["Node.js", "PostgreSQL", "Redis", "AWS", "Cloudflare", "Stripe"],
+    extendedDescription:
+      "A full-stack childcare marketplace connecting parents with daycares and caregivers, featuring geospatial search, advanced filtering, provider management tools, and integrated billing and notification systems.",
+    repositoryURL: "",
+    demoURL: "http://lucyscircle.ca",
+    videoURLs: [],
+  },
   {
     title: "Mozart",
     description: "An all-in-one touch display piano",

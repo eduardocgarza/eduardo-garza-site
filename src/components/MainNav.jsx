@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 
 export const RESUME_URL =
-  "https://drive.google.com/file/d/1XCFzIutaDbF6rE1_EDms30n42VbYsq6u/view";
+  "https://drive.google.com/file/d/1KEY6yLtWh2OCIVY2MoHcJat7VFZO6xmY/view?usp=sharing";
 
 export default function MainNav() {
   return (

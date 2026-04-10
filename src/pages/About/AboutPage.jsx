@@ -58,6 +58,8 @@ export default function AboutPage() {
     {
       role: "Founder",
       company: "Mozart Pianos",
+      description:
+        "Raised $100k in capital, led a 10-member cross-functional team in the design, hardware and software engineering and manufacturing of a consumer electronics digital piano musical instrument and software suite, overseeing all aspects of product development from concept to market launch, including industrial design, hardware engineering, software development, supply chain management and marketing.",
       dates: "October 2020 to September 2023 (3 years)",
       url: "https://mozartpianos.com",
     },
@@ -72,6 +74,8 @@ export default function AboutPage() {
     {
       role: "Manufacturing Engineer Intern",
       company: "Montanari Giluio",
+      description:
+        "Transformed complex engineering designs into detailed technical drawings using advanced CAD software, collaborating closely with cross-functional teams to ensure seamless integration into broader project scopes, while maintaining rigorous quality control to meet industry standards and regulatory requirements.",
       dates: "April 2016 to August 2016 (5 months)",
       url: "https://www.montanarigiulio.com",
     },
@@ -310,7 +314,8 @@ export default function AboutPage() {
                 key={`${item.role}-${item.company}`}
               >
                 <div className="flex gap-x-1.5">
-                  <span className="font-medium">{item.role}</span><span>at</span>
+                  <span className="font-medium">{item.role}</span>
+                  <span>at</span>
                   <a
                     className="flex font-medium no-underline"
                     href={item.url}
@@ -335,8 +340,12 @@ export default function AboutPage() {
                     </svg>
                   </a>
                 </div>
-                <div className="text-gray-500 text-[15px] mb-1">{item.dates}</div>
-                <p className="block text-gray-900 leading-[175%] text-[15px]">{item.description}</p>
+                <div className="text-gray-500 text-[15px] mb-1">
+                  {item.dates}
+                </div>
+                <p className="block text-gray-900 leading-[175%] text-[15px]">
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>
