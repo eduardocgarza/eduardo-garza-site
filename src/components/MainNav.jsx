@@ -1,7 +1,6 @@
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
-import eduardo from "../assets/eduardo.jpg";
 import React from "react";
 import { Link } from "react-router-dom";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 
 export const RESUME_URL =
   "https://drive.google.com/file/d/1XCFzIutaDbF6rE1_EDms30n42VbYsq6u/view";
@@ -17,13 +16,6 @@ export default function MainNav() {
             to="/"
             className="flex items-center font-libreBaskerville text-2xl"
           >
-            <div className="w-[45px] h-[45px] overflow-hidden rounded-full">
-              <img
-                src={eduardo}
-                alt="Eduardo Garza"
-                className="block scale-[110%]"
-              />
-            </div>{" "}
             <span className="ml-3">Eduardo Garza</span>
           </Link>
           <div className="flex pt-4 md:pt-0">
