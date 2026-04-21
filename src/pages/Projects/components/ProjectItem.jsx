@@ -14,6 +14,8 @@ export default function ProjectItem(props) {
     tools,
     extendedDescription,
     detailsURL,
+    detailsLabel = "View archive",
+    previewImagePaths = [],
     repositoryURL,
     demoURL,
     videoURLs = [],
@@ -57,15 +59,30 @@ export default function ProjectItem(props) {
           <section className="flex justify-center items-center md:justify-stretch">
             {detailsURL && (
               <Link
-                className="flex items-center text-xs bg-gray-900 text-white px-2 py-1.5 rounded mr-2"
+                className="mr-2 inline-flex items-center rounded-full bg-gray-900 px-3 py-2 text-xs text-white transition duration-200 hover:bg-gray-700"
                 to={detailsURL}
               >
-                <span>View archive</span>
+                <span>{detailsLabel}</span>
               </Link>
             )}
             {repositoryURL && <ProjectButtonRed url={repositoryURL} />}
             {demoURL && <ProjectButtonBlue url={demoURL} />}
           </section>
+          {detailsURL && previewImagePaths.length > 0 && (
+            <Link
+              className="mt-4 flex flex-wrap justify-center gap-2 md:justify-start"
+              to={detailsURL}
+            >
+              {previewImagePaths.map((previewImagePath, index) => (
+                <img
+                  alt={`${title} preview ${index + 1}`}
+                  className="h-14 w-14 rounded-xl object-cover shadow-sm transition duration-200 hover:scale-[1.03]"
+                  key={previewImagePath}
+                  src={previewImagePath}
+                />
+              ))}
+            </Link>
+          )}
         </section>
       </section>
       {videoURLs.length > 0 &&
