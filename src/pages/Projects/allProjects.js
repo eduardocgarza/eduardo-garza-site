@@ -35,6 +35,7 @@ export const ALL_PROJECTS = [
     ],
     extendedDescription:
       "A touch display piano that teaches you how to play piano, with a built-in music library, MIDI input/output, and a mobile app to learn and play with friends.",
+    detailsURL: "/projects/mozart",
     repositoryURL: "",
     demoURL: "https://mozartpianos.com",
     videoURLs: [

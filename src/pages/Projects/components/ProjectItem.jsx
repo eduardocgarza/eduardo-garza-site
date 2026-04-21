@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ProjectButtonRed from "./ProjectButtonRed";
 import ProjectButtonBlue from "./ProjectButtonBlue";
 
@@ -12,6 +13,7 @@ export default function ProjectItem(props) {
     imagePath,
     tools,
     extendedDescription,
+    detailsURL,
     repositoryURL,
     demoURL,
     videoURLs = [],
@@ -53,6 +55,14 @@ export default function ProjectItem(props) {
             </p>
           </section>
           <section className="flex justify-center items-center md:justify-stretch">
+            {detailsURL && (
+              <Link
+                className="flex items-center text-xs bg-gray-900 text-white px-2 py-1.5 rounded mr-2"
+                to={detailsURL}
+              >
+                <span>View archive</span>
+              </Link>
+            )}
             {repositoryURL && <ProjectButtonRed url={repositoryURL} />}
             {demoURL && <ProjectButtonBlue url={demoURL} />}
           </section>

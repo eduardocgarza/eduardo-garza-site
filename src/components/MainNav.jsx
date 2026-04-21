@@ -8,7 +8,7 @@ export const RESUME_URL =
 export default function MainNav() {
   return (
     <section>
-      <nav className="fixed md:h-[65px] bg-white text-gray-900 w-full border-b border-b-gray-200 py-4 md:py-0">
+      <nav className="fixed top-0 left-0 z-40 md:h-[65px] bg-white text-gray-900 w-full border-b border-b-gray-200 py-4 md:py-0">
         <div
           className={`px-2 md:min-w-[600px] max-w-[750px] mx-auto flex flex-col md:flex-row justify-between items-center md:h-[65px]`}
         >
