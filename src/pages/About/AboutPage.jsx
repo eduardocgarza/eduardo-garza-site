@@ -10,50 +10,51 @@ export default function AboutPage() {
     },
     {
       label: "Education",
-      text: "Bachelor's degree, dual-degree in computer science & business (2015-2021) at University of British Columbia (UBC) Vancouver",
+      text: "Bachelor's dual-degree in Computer Science & Business (2015-2021) at UBC Vancouver",
     },
     {
-      label: "Languages",
-      text: "English, Spanish, French, Italian",
+      label: "Speak",
+      text: "English, Spanish, French & Italian",
     },
     {
       label: "Interests",
-      text: "Philosophy and political science, playing the piano for 20 years, and learning Ancient Greek, Latin, and Mandarin",
+      text: "Playing piano (20 years), learning Ancient Greek & Latin, reading philosophy & political theory, electronics & hardware homelab",
     },
   ];
 
   const workExperience = [
     {
-      role: "Founder",
+      role: "Software Lead",
       company: "Lucy's Circle",
-      dates: "December 2024 to Present (1 year 6 months)",
+      dates: "December 2024 to May 2026 (1 year 6 months)",
       description:
         "Built and scaled a two-sided childcare marketplace, enabling parents to discover and compare trusted care while allowing providers to manage their presence, recruit staff, and connect directly with families across local communities",
       url: "http://lucyscircle.ca",
     },
     {
-      role: "AI Instructor & Consultant",
-      company: "Emerson Academy",
-      dates: "2023 to Present (3 years 4 months)",
-      description:
-        "Offer online self-training courses and seminars as well as in-person workshops for groups of 50-100 and private executive coaching and consulting on artificial intelligence for associations and private groups across BC, Canada.",
-      url: "https://emersonacademy.org",
-    },
-    {
-      role: "Software Engineer Contractor",
+      role: "Senior Software Engineer (Contract)",
       company: "HUGE",
-      dates: "February 2025 to August 2025 (6 months)",
+      dates: "March 2025 to August 2025 (6 months)",
       description:
         "Led development of a Swift mobile app and web-based AI chat using the Vercel AI SDK, building agentic workflows with LangChain, Ollama, and open-source models (DeepSeek, Qwen, Kimi, Gemma). Designed and implemented integrations via MCP tools and sub-agents to connect external systems (Slack, Spotify, Google Home), alongside TTS/STT pipelines, enabling a fully local, privacy-first AI experience.",
       url: "https://huge.tech",
     },
+
     {
       role: "Software Engineer",
       company: "Spring Financial",
-      dates: "September 2023 to February 2025 (1 year 6 months)",
+      dates: "August 2023 to January 2025 (1 year 6 months)",
       description:
         "Worked with Python, Docker, AWS EC2/ECS/SAM to deliver robust and stable APIs for consumer loan customer & payments management for over 1 million customers.",
       url: "https://springfinancial.ca",
+    },
+    {
+      role: "AI Instructor & Consultant",
+      company: "Emerson Academy",
+      dates: "2023 to 2026 (4 years)",
+      description:
+        "Provided in-person workshops and private coaching on artificial intelligence to businesses, associations, and schools across British Columbia, Canada, covering practical applications, implementation strategies, and ethical considerations.",
+      url: "https://emersonacademy.org",
     },
     {
       role: "Founder",
@@ -64,7 +65,7 @@ export default function AboutPage() {
       url: "https://mozartpianos.com",
     },
     {
-      role: "Manufacturing Engineer",
+      role: "ERP & Operations Systems Engineer",
       company: "GINTARINI",
       dates: "June 2022 to January 2023 (8 months)",
       description:
@@ -72,7 +73,15 @@ export default function AboutPage() {
       url: "https://gintarini.com",
     },
     {
-      role: "Manufacturing Engineer Intern",
+      role: "Full Stack Engineer (Co-op)",
+      company: "Bioconscious Research Foundation",
+      dates: "May 2019 to September 2019 (5 months)",
+      description:
+        "Led the migration of an iOS application from Swift to a cross-platform React Native mobile app, helping modernize the product and expand development efficiency across platforms. Responsible for designing and implementing core architectural layers, including React Native lifecycle patterns, Redux state management, third-party API integrations, unit testing, offline support, and persistent storage. In addition to hands-on development, mentored junior developers, led code reviews, and guided the team across development, design, testing, and overall engineering best practices.",
+      url: "https://www.bioconscious.tech",
+    },
+    {
+      role: "Mechanical Systems Engineer",
       company: "Montanari Giluio",
       description:
         "Transformed complex engineering designs into detailed technical drawings using advanced CAD software, collaborating closely with cross-functional teams to ensure seamless integration into broader project scopes, while maintaining rigorous quality control to meet industry standards and regulatory requirements.",
