@@ -3,6 +3,88 @@ import { Link } from "react-router-dom";
 import ProjectButtonRed from "./ProjectButtonRed";
 import ProjectButtonBlue from "./ProjectButtonBlue";
 
+function escapeRegExp(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function renderHighlightedText(text, highlightTerms) {
+  if (!highlightTerms.length) return text;
+
+  const terms = [...highlightTerms].sort((a, b) => b.length - a.length);
+  const termSet = new Set(terms);
+  const pattern = new RegExp(`(${terms.map(escapeRegExp).join("|")})`, "g");
+
+  return text.split(pattern).map((part, index) =>
+    termSet.has(part) ? (
+      <strong className="font-medium text-gray-950" key={`${part}-${index}`}>
+        {part}
+      </strong>
+    ) : (
+      part
+    )
+  );
+}
+
+function ProjectBulletList({ bulletPoints, highlightTerms, className = "mt-2" }) {
+  if (!bulletPoints.length) return null;
+
+  return (
+    <ul
+      className={`${className} list-inside list-disc text-[14.5px] leading-[200%] text-gray-900`}
+    >
+      {bulletPoints.map((bulletPoint) => (
+        <li key={bulletPoint}>
+          {renderHighlightedText(bulletPoint, highlightTerms)}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function ProjectBulletSections({ bulletPointSections, highlightTerms }) {
+  if (!bulletPointSections.length) return null;
+
+  return (
+    <section className="mt-3 space-y-3">
+      {bulletPointSections.map((bulletPointSection) => (
+        <section key={bulletPointSection.title}>
+          <h3 className="mb-1 text-[11px] font-semibold uppercase text-gray-400">
+            {bulletPointSection.title}
+          </h3>
+          <ProjectBulletList
+            bulletPoints={bulletPointSection.items}
+            className=""
+            highlightTerms={highlightTerms}
+          />
+        </section>
+      ))}
+    </section>
+  );
+}
+
+function ProjectDetails({
+  bulletPoints,
+  bulletPointSections,
+  extendedDescription,
+  highlightTerms,
+}) {
+  return (
+    <section className="mt-4 text-center md:text-left">
+      <p className="text-gray-900 leading-[200%] text-[14.5px]">
+        {extendedDescription}
+      </p>
+      <ProjectBulletList
+        bulletPoints={bulletPoints}
+        highlightTerms={highlightTerms}
+      />
+      <ProjectBulletSections
+        bulletPointSections={bulletPointSections}
+        highlightTerms={highlightTerms}
+      />
+    </section>
+  );
+}
+
 export default function ProjectItem(props) {
   const { project } = props;
   if (!project) return null;
@@ -12,6 +94,7 @@ export default function ProjectItem(props) {
     description,
     bulletPoints = [],
     bulletPointSections = [],
+    highlightTerms = [],
     imagePath,
     tools,
     extendedDescription,
@@ -83,34 +166,12 @@ export default function ProjectItem(props) {
             )}
           </section>
         </section>
-        <section className="mt-4 text-center md:text-left">
-          <p className="text-gray-900 leading-[200%] text-[14.5px]">
-            {extendedDescription}
-          </p>
-          {bulletPoints.length > 0 && (
-            <ul className="mt-2 list-inside list-disc text-[14.5px] leading-[200%] text-gray-900">
-              {bulletPoints.map((bulletPoint) => (
-                <li key={bulletPoint}>{bulletPoint}</li>
-              ))}
-            </ul>
-          )}
-          {bulletPointSections.length > 0 && (
-            <section className="mt-3 space-y-3">
-              {bulletPointSections.map((bulletPointSection) => (
-                <section key={bulletPointSection.title}>
-                  <h3 className="mb-1 text-[10px] font-semibold uppercase tracking-wider text-gray-900">
-                    {bulletPointSection.title}
-                  </h3>
-                  <ul className="list-inside list-disc text-[14.5px] leading-[200%] text-gray-900">
-                    {bulletPointSection.items.map((bulletPoint) => (
-                      <li key={bulletPoint}>{bulletPoint}</li>
-                    ))}
-                  </ul>
-                </section>
-              ))}
-            </section>
-          )}
-        </section>
+        <ProjectDetails
+          bulletPoints={bulletPoints}
+          bulletPointSections={bulletPointSections}
+          extendedDescription={extendedDescription}
+          highlightTerms={highlightTerms}
+        />
       </section>
       {videoURLs.length > 0 &&
         videoURLs.map((videoURL, index) => (
