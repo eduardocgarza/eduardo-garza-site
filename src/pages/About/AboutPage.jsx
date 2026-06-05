@@ -28,7 +28,7 @@ export default function AboutPage() {
       company: "Lucy's Circle",
       dates: "December 2024 to May 2026 (1 year 6 months)",
       description:
-        "Built and scaled a two-sided childcare marketplace, enabling parents to discover and compare trusted care while allowing providers to manage their presence, recruit staff, and connect directly with families across local communities",
+        "Architected and built a two-sided childcare marketplace on Node.js, PostgreSQL, Redis/Valkey, AWS, and Cloudflare, spanning geospatial discovery, provider onboarding, billing, notifications, internal analytics, production infrastructure, security, CI/CD, migrations, and observability.",
       url: "http://lucyscircle.ca",
     },
     {
@@ -36,7 +36,7 @@ export default function AboutPage() {
       company: "HUGE",
       dates: "March 2025 to August 2025 (6 months)",
       description:
-        "Led development of a Swift mobile app and web-based AI chat using the Vercel AI SDK, building agentic workflows with LangChain, Ollama, and open-source models (DeepSeek, Qwen, Kimi, Gemma). Designed and implemented integrations via MCP tools and sub-agents to connect external systems (Slack, Spotify, Google Home), alongside TTS/STT pipelines, enabling a fully local, privacy-first AI experience.",
+        "Built Swift and Next.js applications for a privacy-first AI hardware product, using Vercel AI SDK, LangChain, Ollama, MCP, RAG, and local LLM orchestration for agentic workflows. Implemented MCP tool and sub-agent integrations for Slack, Spotify, and Google Home, plus TTS/STT pipelines for local voice- and tool-driven AI interactions.",
       url: "https://huge.tech",
     },
 
@@ -45,7 +45,7 @@ export default function AboutPage() {
       company: "Spring Financial",
       dates: "August 2023 to January 2025 (1 year 6 months)",
       description:
-        "Worked with Python, Docker, AWS EC2/ECS/SAM to deliver robust and stable APIs for consumer loan customer & payments management for over 1 million customers.",
+        "Built data synchronization services between third-party loan management software and internal CRM systems, reducing loan origination handoffs from about 1 week to under 8 hours and supporting $25M+ in revenue across 100+ sales employees. Led development of an API-based underwriting automation system that replaced 80%+ of manual review tasks for 50+ consumer-loan underwriters.",
       url: "https://springfinancial.ca",
     },
     {
@@ -53,14 +53,14 @@ export default function AboutPage() {
       company: "Emerson Academy",
       dates: "2023 to 2026 (4 years)",
       description:
-        "Provided in-person workshops and private coaching on artificial intelligence to businesses, associations, and schools across British Columbia, Canada, covering practical applications, implementation strategies, and ethical considerations.",
+        "Taught practical AI and machine learning implementation to business, school, and association audiences; founded Vancouver AI Society and led weekly AI and software events for two years.",
       url: "https://emersonacademy.org",
     },
     {
       role: "Founder",
       company: "Mozart Pianos",
       description:
-        "Raised $100k in capital, led a 10-member cross-functional team in the design, hardware and software engineering and manufacturing of a consumer electronics digital piano musical instrument and software suite, overseeing all aspects of product development from concept to market launch, including industrial design, hardware engineering, software development, supply chain management and marketing.",
+        "Led a 10+ member cross-functional team building digital-piano hardware and software prototypes, spanning embedded electronics, industrial and mechanical design, manufacturing, supplier negotiation, and companion software.",
       dates: "October 2020 to September 2023 (3 years)",
       url: "https://mozartpianos.com",
     },
@@ -89,6 +89,15 @@ export default function AboutPage() {
       url: "https://www.montanarigiulio.com",
     },
   ];
+
+  const hiddenWorkExperienceCompanies = new Set([
+    "GINTARINI",
+    "Montanari Giluio",
+  ]);
+  const visibleWorkExperience = workExperience.filter(
+    (item) => !hiddenWorkExperienceCompanies.has(item.company),
+  );
+
   const skillSections = [
     {
       title: "Front End",
@@ -96,7 +105,7 @@ export default function AboutPage() {
       items: [
         {
           label: "Tools",
-          text: "React, Next.js, TanStack Start, Vue 3, Svelte",
+          text: "React, Next.js, Vue, Svelte, TypeScript, Tailwind, TanStack Query, client caching (IndexedDB, Cache API)",
         },
         {
           text: "Advanced client-side state management and data fetching strategies",
@@ -124,7 +133,7 @@ export default function AboutPage() {
       items: [
         {
           label: "Tools",
-          text: "Node.js (Express), Python (Flask, FastAPI), Java, PHP, C++, Bash",
+          text: "Node.js/Express, Python/FastAPI/Flask, distributed systems, event-driven workflows, Kafka, RabbitMQ, BullMQ",
         },
         {
           label: "RESTful API design",
@@ -248,7 +257,7 @@ export default function AboutPage() {
       ],
     },
     {
-      title: "Payments & Integrations",
+      title: "Integrations & AI Systems",
       icon: "/icons/payments.png",
       items: [
         {
@@ -259,7 +268,11 @@ export default function AboutPage() {
         },
         {
           label: "External APIs",
-          text: "email, SMS, AI providers, object storage systems",
+          text: "webhooks, email and SMS APIs, object storage systems",
+        },
+        {
+          label: "AI systems",
+          text: "OpenAI, Claude, Gemini, Vercel AI SDK, LangChain, MCP, RAG",
         },
       ],
     },
@@ -317,7 +330,7 @@ export default function AboutPage() {
             </a>
           </p>
           <div>
-            {workExperience.map((item) => (
+            {visibleWorkExperience.map((item) => (
               <div
                 className="text-gray-900 mt-2 mb-6 text-[16px] border-l border-l-gray-300 pl-4"
                 key={`${item.role}-${item.company}`}
