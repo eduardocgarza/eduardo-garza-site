@@ -13,13 +13,58 @@ export const ALL_PROJECTS = [
   {
     title: "Lucy’s Circle",
     description: "Childcare discovery and marketplace platform",
+    bulletPointSections: [
+      {
+        title: "Front-End",
+        items: [
+          "Cloudflare Workers for Svelte web apps",
+          "IP geolocation (IP address to geolocation) for user-specific location recommendations",
+          "Fingerprinting and advanced anonymous user identification tracking for security & rate limiting",
+          "Google Maps and Google Places for reverse geolocation and geospatial coordinate search",
+        ],
+      },
+      {
+        title: "Back-End",
+        items: [
+          "3rd-party authentication with Google Auth and Apple Auth",
+          "Custom-RBAC implementation for admin management and moderation and internal systems health insights",
+          "Redundant email and SMS API integrations (Twilio, Amazon SES, Mailgun, Resend)",
+          "Redundant logging technologies (BetterStack, Papertrail, Google Cloud Logging, AWS CloudWatch)",
+          "Claude, OpenAI and Gemini LLM-powered profile enrichment system for structured profile data",
+          "Stripe subscriptions, payments and Stripe Connect for marketplace implementation",
+          "Custom internal analytics implementation for users, showcasing impressions, views, likes & follows",
+          "Client-side caching using Cache API, Dexie JS, Image API, SessionStorage & LocalStorage",
+          "Product analytics using PostHog",
+          "Automated API tests using Vitest and Testcontainers",
+        ],
+      },
+      {
+        title: "Infrastructure",
+        items: [
+          "ELB/EC2 Node/Express API with in-memory",
+          "Valkey ElastiCache for full backend API",
+          "Postgres RDS database with auto-scaling and automated backups",
+          "Digital Ocean VM with a self-hosted Grafana stack (Grafana, Prometheus, Loki)",
+          "Cloudflare R2 for object storage using private and public buckets to create user private cloud drives",
+          "Cloudflare Images for CDN image transformations for optimal speed and memory rendering on client-side",
+          "Google Cloud Run serverless Docker container API for image transformations",
+          "CI/CD pipeline for API and database and migrations management with AWS CodeDeploy, Github Actions, and Flyway for multi-environment setup (development, staging, production)",
+          "Local development environment orchestrator using Docker, Dockerode, Testcontainers to automate multi-repo microservice setup, container lifecycle management, database provisioning and migrations, giving developers a local replica of the staging/production environment",
+        ],
+      },
+    ],
     imagePath: lucyLogo,
     tools: ["Node.js", "PostgreSQL", "Redis", "AWS", "Cloudflare", "Stripe"],
     extendedDescription:
       "A full-stack childcare marketplace connecting parents with daycares and caregivers, featuring geospatial search, advanced filtering, provider management tools, and integrated billing and notification systems.",
     repositoryURL: "",
-    demoURL: "http://lucyscircle.ca",
-    videoURLs: [],
+    demoURL: "",
+    videoURLs: [
+      "https://www.youtube.com/embed/8WA_Gp62gvE",
+      "https://www.youtube.com/embed/iB3z9FiYp-M",
+      "https://www.youtube.com/embed/weS-TchWAY4",
+      "https://www.youtube.com/embed/z0TiDl2QGrM",
+    ],
   },
   {
     title: "Mozart",

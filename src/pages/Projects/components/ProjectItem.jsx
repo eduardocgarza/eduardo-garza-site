@@ -10,6 +10,8 @@ export default function ProjectItem(props) {
   const {
     title,
     description,
+    bulletPoints = [],
+    bulletPointSections = [],
     imagePath,
     tools,
     extendedDescription,
@@ -25,63 +27,88 @@ export default function ProjectItem(props) {
 
   return (
     <section className="mb-10">
-      <section className="flex flex-col md:flex-row border border-gray-200 p-6 rounded-2xl shadow-sm">
-        {imagePath && (
-          <section className="flex items-center justify-center md:items-start md:py-4">
-            <img
-              src={imagePath}
-              alt={title}
-              className="block w-[50px] rounded-full"
-            />
-          </section>
-        )}
-        <section className="ml-6 flex-1">
-          <header className="mb-2 text-center md:text-left">
-            <h2 className="font-medium text-[20px] text-medium">{title}</h2>
-            <p className="text-sm text-gray-500 text-[14px]">{description}</p>
-          </header>
-          <section className="flex flex-wrap mb-2 justify-center md:justify-start">
-            {tools &&
-              tools.map((toolName) => (
-                <p
-                  className="text-xs mr-1 mb-2 bg-gray-200 rounded-full py-1 px-2 text-gray-700 hover:bg-gray-300 cursor-pointer transition duration-500 ease-in-out"
-                  key={toolName}
+      <section className="border border-gray-200 p-6 rounded-2xl shadow-sm">
+        <section className="flex flex-col md:flex-row">
+          {imagePath && (
+            <section className="flex items-center justify-center md:items-start md:py-4">
+              <img
+                src={imagePath}
+                alt={title}
+                className="block w-[50px] rounded-full"
+              />
+            </section>
+          )}
+          <section className="ml-6 flex-1">
+            <header className="mb-2 text-center md:text-left">
+              <h2 className="font-medium text-[20px] text-medium">{title}</h2>
+              <p className="text-sm text-gray-500 text-[14px]">{description}</p>
+            </header>
+            <section className="flex flex-wrap mb-2 justify-center md:justify-start">
+              {tools &&
+                tools.map((toolName) => (
+                  <p
+                    className="text-xs mr-1 mb-2 bg-gray-200 rounded-full py-1 px-2 text-gray-700 hover:bg-gray-300 cursor-pointer transition duration-500 ease-in-out"
+                    key={toolName}
+                  >
+                    {toolName}
+                  </p>
+                ))}
+            </section>
+            <section className="flex justify-center items-center md:justify-stretch">
+              {detailsURL && (
+                <Link
+                  className="mr-2 inline-flex items-center rounded-full bg-gray-900 px-3 py-2 text-xs text-white transition duration-200 hover:bg-gray-700"
+                  to={detailsURL}
                 >
-                  {toolName}
-                </p>
-              ))}
-          </section>
-          <section className="mb-4 text-center md:text-left">
-            <p className="text-gray-900 leading-[26px] text-[14px]">
-              {extendedDescription}
-            </p>
-          </section>
-          <section className="flex justify-center items-center md:justify-stretch">
-            {detailsURL && (
+                  <span>{detailsLabel}</span>
+                </Link>
+              )}
+              {repositoryURL && <ProjectButtonRed url={repositoryURL} />}
+              {demoURL && <ProjectButtonBlue url={demoURL} />}
+            </section>
+            {detailsURL && previewImagePaths.length > 0 && (
               <Link
-                className="mr-2 inline-flex items-center rounded-full bg-gray-900 px-3 py-2 text-xs text-white transition duration-200 hover:bg-gray-700"
+                className="mt-4 flex flex-wrap justify-center gap-2 md:justify-start"
                 to={detailsURL}
               >
-                <span>{detailsLabel}</span>
+                {previewImagePaths.map((previewImagePath, index) => (
+                  <img
+                    alt={`${title} preview ${index + 1}`}
+                    className="h-14 w-14 rounded-xl object-cover shadow-sm transition duration-200 hover:scale-[1.03]"
+                    key={previewImagePath}
+                    src={previewImagePath}
+                  />
+                ))}
               </Link>
             )}
-            {repositoryURL && <ProjectButtonRed url={repositoryURL} />}
-            {demoURL && <ProjectButtonBlue url={demoURL} />}
           </section>
-          {detailsURL && previewImagePaths.length > 0 && (
-            <Link
-              className="mt-4 flex flex-wrap justify-center gap-2 md:justify-start"
-              to={detailsURL}
-            >
-              {previewImagePaths.map((previewImagePath, index) => (
-                <img
-                  alt={`${title} preview ${index + 1}`}
-                  className="h-14 w-14 rounded-xl object-cover shadow-sm transition duration-200 hover:scale-[1.03]"
-                  key={previewImagePath}
-                  src={previewImagePath}
-                />
+        </section>
+        <section className="mt-4 text-center md:text-left">
+          <p className="text-gray-900 leading-[200%] text-[14.5px]">
+            {extendedDescription}
+          </p>
+          {bulletPoints.length > 0 && (
+            <ul className="mt-2 list-inside list-disc text-[14.5px] leading-[200%] text-gray-900">
+              {bulletPoints.map((bulletPoint) => (
+                <li key={bulletPoint}>{bulletPoint}</li>
               ))}
-            </Link>
+            </ul>
+          )}
+          {bulletPointSections.length > 0 && (
+            <section className="mt-3 space-y-3">
+              {bulletPointSections.map((bulletPointSection) => (
+                <section key={bulletPointSection.title}>
+                  <h3 className="mb-1 text-[10px] font-semibold uppercase tracking-wider text-gray-900">
+                    {bulletPointSection.title}
+                  </h3>
+                  <ul className="list-inside list-disc text-[14.5px] leading-[200%] text-gray-900">
+                    {bulletPointSection.items.map((bulletPoint) => (
+                      <li key={bulletPoint}>{bulletPoint}</li>
+                    ))}
+                  </ul>
+                </section>
+              ))}
+            </section>
           )}
         </section>
       </section>
