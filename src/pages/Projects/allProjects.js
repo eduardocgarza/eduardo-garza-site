@@ -1,4 +1,5 @@
 import commaIcon from "../../assets/projects/commaai.jpg";
+import acquisitionRoadmapIcon from "../../assets/projects/acquisition-roadmap.png";
 import lucyLogo from "../../assets/projects/lucyLogo.png";
 import mozartIcon from "../../assets/projects/mozart.jpg";
 import emersonIcon from "../../assets/projects/emerson.jpg";
@@ -10,6 +11,126 @@ import universityFriendsMatcherIcon from "../../assets/projects/spotify.png";
 import creativeChroniclesIcon from "../../assets/projects/creativechronicles.png";
 
 export const ALL_PROJECTS = [
+  {
+    title: "$100 Million Roadmap",
+    description: "Acquisition.com-powered founder execution workspace",
+    bulletPointSections: [
+      {
+        title: "Product",
+        items: [
+          "Authenticated business workspaces with current-stage tracking across the full Stage 0 to Stage 9 roadmap.",
+          "Roadmap stage catalog with snapshots, constraints, graduation criteria, key concepts, Cloudflare Stream lessons, and R2 PDF resources.",
+          "Stage workflows for evidence records, criterion checks, recommended actions, stage-specific inputs, readiness summaries, gate attempts, and self-serve stage advancement.",
+          "Gamification layer that awards XP, streaks, role progression, badge families, and progress events from real completed work.",
+        ],
+      },
+      {
+        title: "Tools & Content",
+        items: [
+          "Interactive builders for offers, lead magnets, Core Four lead planning, content units, guarantees, offer stacks, money models, value-equation scoring, and unit economics.",
+          "Course surfaces for $100M Offers, $100M Leads, and $100M Money Models with video progress and supplementary materials.",
+          "Private AI chat and dictation support for structured roadmap notes and business-context-aware conversations.",
+        ],
+      },
+      {
+        title: "Front-End",
+        items: [
+          "SvelteKit and Svelte 5 app with the Cloudflare adapter, Tailwind CSS v4, DaisyUI, lucide icons, and responsive dashboard, roadmap, course, and tool pages.",
+          "TanStack Query state wrappers around Axios route clients so pages avoid direct network calls.",
+          "Auth-aware route shells, page-specific skeletons, modal previews, reward sounds, and mobile-safe tool workflows.",
+        ],
+      },
+      {
+        title: "Back-End & Data",
+        items: [
+          "Node 22 Express API with Better Auth, owner-scoped business authorization, validation, and thin route handlers.",
+          "PostgreSQL model/action layer with Flyway migrations covering auth, businesses, roadmap catalog, stage records, actions, gates, achievements, tool outputs, course progress, profiles, and AI chat.",
+          "Cloudflare Stream, Cloudflare R2-compatible object storage, Google Places, Resend, Twilio, and OpenAI, Anthropic, and Gemini provider integrations.",
+        ],
+      },
+      {
+        title: "Infrastructure",
+        items: [
+          "Cloudflare Pages-ready frontend, Railway-oriented API build, environment templates, local service scripts, and multi-environment migration scripts.",
+          "Automated Node test coverage for profile icons, AI chat context, AI chat organization, and tool output validation.",
+        ],
+      },
+    ],
+    imagePath: acquisitionRoadmapIcon,
+    tools: [
+      "SvelteKit",
+      "Svelte 5",
+      "Node/Express",
+      "PostgreSQL",
+      "Cloudflare",
+      "Better Auth",
+      "AI APIs",
+    ],
+    extendedDescription:
+      "A full-stack founder workspace that turns Acquisition.com scaling frameworks into a product experience: business workspaces, a 10-stage progression map, course library, stage actions, proof records, readiness gates, interactive tools, and rewards tied to completed work.",
+    highlightTerms: [
+      "Acquisition.com",
+      "business workspaces",
+      "10-stage progression map",
+      "course library",
+      "stage actions",
+      "proof records",
+      "readiness gates",
+      "interactive tools",
+      "completed work",
+      "Authenticated business workspaces",
+      "current-stage tracking",
+      "Stage 0 to Stage 9",
+      "Roadmap stage catalog",
+      "snapshots",
+      "constraints",
+      "graduation criteria",
+      "Cloudflare Stream",
+      "R2 PDF resources",
+      "evidence records",
+      "criterion checks",
+      "recommended actions",
+      "stage-specific inputs",
+      "readiness summaries",
+      "gate attempts",
+      "stage advancement",
+      "Gamification",
+      "XP",
+      "streaks",
+      "role progression",
+      "badge families",
+      "progress events",
+      "Interactive builders",
+      "$100M Offers",
+      "$100M Leads",
+      "$100M Money Models",
+      "AI chat",
+      "dictation",
+      "SvelteKit",
+      "Svelte 5",
+      "Cloudflare adapter",
+      "Tailwind CSS v4",
+      "DaisyUI",
+      "TanStack Query",
+      "Axios route clients",
+      "Better Auth",
+      "owner-scoped business authorization",
+      "PostgreSQL",
+      "Flyway migrations",
+      "Cloudflare R2",
+      "Google Places",
+      "Resend",
+      "Twilio",
+      "OpenAI",
+      "Anthropic",
+      "Gemini",
+      "Cloudflare Pages",
+      "Railway",
+      "Node test coverage",
+    ],
+    repositoryURL: "",
+    demoURL: "https://100millionroadmap.com",
+  },
   {
     title: "Lucy’s Circle",
     description: "Childcare discovery and marketplace platform",
