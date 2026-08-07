@@ -8,6 +8,7 @@ const creativeChroniclesIcon = "/assets/projects/creativechronicles.png";
 export const ALL_PROJECTS = [
   {
     title: "$100 Million Roadmap",
+    hidden: true,
     description: "Founder roadmap app for Alex Hormozi and Acquisition.com frameworks",
     bulletPointSections: [
       {
