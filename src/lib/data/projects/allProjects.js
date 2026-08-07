@@ -286,7 +286,7 @@ export const ALL_PROJECTS = [
       "A dashboard for viewing and analyzing your rides using the Comma.ai self-driving car navigator. Manage your data in JSON and ZIP files, view your trips in tabular format, search and query trips with advanced parameters, and analyze specific trips with a Google Maps route viewer and advanced aggregate analysis.",
     repositoryURL:
       "https://github.com/eduardocgarza/openpilot-dashboard-comma.ai",
-    demoURL: "https://openpilot.netlify.app",
+    demoURL: "https://openpilot.garza.ca/",
     videoURLs: ["https://www.loom.com/embed/e7861f2ea4ef4758acbfc50bf93e62ac"],
   },
   // {
