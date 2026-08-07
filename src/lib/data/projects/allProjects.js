@@ -1,75 +1,10 @@
 const commaIcon = "/assets/projects/commaai.jpg";
-const acquisitionRoadmapIcon = "/assets/projects/acquisition-roadmap.png";
 const lucyLogo = "/assets/projects/lucyLogo.png";
 const mozartIcon = "/assets/projects/mozart.jpg";
 const emersonIcon = "/assets/projects/emerson.jpg";
 const creativeChroniclesIcon = "/assets/projects/creativechronicles.png";
 
 export const ALL_PROJECTS = [
-  {
-    title: "$100 Million Roadmap",
-    hidden: true,
-    description: "Founder roadmap app for Alex Hormozi and Acquisition.com frameworks",
-    bulletPointSections: [
-      {
-        title: "Product",
-        items: [
-          "A working founder workspace that turns Alex Hormozi and Acquisition.com frameworks into a staged roadmap from Stage 0 to Stage 9.",
-          "Users can track their business stage, complete actions, save evidence, review readiness, and move through stage gates.",
-          "The app brings roadmap content, courses, tools, rewards, and AI-assisted notes into one authenticated product.",
-        ],
-      },
-      {
-        title: "Technical Work",
-        items: [
-          "Built the SvelteKit/Svelte 5 front end for the dashboard, roadmap, course, and tool views.",
-          "Built a Node/Express API with Better Auth, owner-scoped business access, validation, and PostgreSQL migrations.",
-          "Integrated Cloudflare Stream, R2 resources, AI providers, Google Places, Resend, and Twilio.",
-        ],
-      },
-    ],
-    imagePath: acquisitionRoadmapIcon,
-    tools: [
-      "SvelteKit",
-      "Svelte 5",
-      "Node/Express",
-      "PostgreSQL",
-      "Cloudflare",
-      "Better Auth",
-      "AI APIs",
-    ],
-    extendedDescription:
-      "A founder execution app for Alex Hormozi and Acquisition.com-style operating frameworks. The main technical lift was turning roadmap content, courses, tools, AI notes, rewards, and business progress into one product instead of a static content library.",
-    highlightTerms: [
-      "Alex Hormozi",
-      "Acquisition.com",
-      "founder workspace",
-      "staged roadmap",
-      "Stage 0 to Stage 9",
-      "stage gates",
-      "roadmap content",
-      "courses",
-      "tools",
-      "rewards",
-      "AI-assisted notes",
-      "authenticated product",
-      "SvelteKit",
-      "Svelte 5",
-      "Node/Express",
-      "Better Auth",
-      "owner-scoped business access",
-      "PostgreSQL",
-      "Cloudflare Stream",
-      "R2 resources",
-      "AI providers",
-      "Google Places",
-      "Resend",
-      "Twilio",
-    ],
-    repositoryURL: "",
-    demoURL: "https://100millionroadmap.com",
-    videoURLs: ["https://www.loom.com/embed/8052848f0d844aea86f02f7a3d4d819e"],
-  },
   {
     title: "Lucy’s Circle",
     description: "Childcare discovery and marketplace platform",
