@@ -125,6 +125,7 @@ export const ALL_PROJECTS = [
     ],
     repositoryURL: "",
     demoURL: "https://100millionroadmap.com",
+    videoURLs: ["https://www.loom.com/embed/8052848f0d844aea86f02f7a3d4d819e"],
   },
   {
     title: "Lucy’s Circle",
