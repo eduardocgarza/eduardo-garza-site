@@ -210,7 +210,7 @@ export const ALL_PROJECTS = [
       "Get the YouTube videos of inventors, founders, and key executives at top companies in chronological order, understanding their evolving ideas and advice throughout their own careers.",
     repositoryURL:
       "https://github.com/eduardocgarza/app-public-creativechronicles-client",
-    demoURL: "",
+    demoURL: "https://creativechronicles.garza.ca",
     videoURLs: ["https://www.loom.com/embed/5601229e3fbe4d6ab8c9b795ab5e80c3"],
   },
   {
