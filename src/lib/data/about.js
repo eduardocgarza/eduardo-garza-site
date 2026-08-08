@@ -5,7 +5,11 @@ export const aboutMe = [
   },
   {
     label: "Education",
-    text: "Bachelor's dual-degree in Computer Science & Business (2015-2021) at UBC Vancouver",
+    text: "Bachelor's dual-degree in Computer Science & Business (2015-2021) at",
+    link: {
+      text: "UBC Vancouver",
+      url: "https://www.ubc.ca",
+    },
   },
   {
     label: "Speak",
@@ -24,7 +28,7 @@ export const workExperience = [
     dates: "December 2024 to May 2026 (1 year 6 months)",
     description:
       "Architected and built a two-sided childcare marketplace on Node.js, PostgreSQL, Redis/Valkey, AWS, and Cloudflare, spanning geospatial discovery, provider onboarding, billing, notifications, internal analytics, production infrastructure, security, CI/CD, migrations, and observability.",
-    url: "http://lucyscircle.ca",
+    url: "https://lucyscircle.com",
   },
   {
     role: "Senior Software Engineer (Contract)",

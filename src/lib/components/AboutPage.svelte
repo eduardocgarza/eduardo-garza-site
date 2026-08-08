@@ -19,6 +19,16 @@
       <li class="mb-3 mt-2 text-[16px] text-gray-900">
         <span class="font-medium">{item.label}:</span>
         <span>{item.text}</span>
+        {#if item.link}
+          <a
+            class="font-medium text-gray-900 underline-offset-2 hover:underline"
+            href={item.link.url}
+            rel="noreferrer"
+            target="_blank"
+          >
+            {item.link.text}
+          </a>
+        {/if}
       </li>
     {/each}
   </section>
@@ -42,7 +52,12 @@
           <div class="flex gap-x-1.5">
             <span class="font-medium">{item.role}</span>
             <span>at</span>
-            <a class="flex font-medium no-underline" href={item.url} rel="noreferrer" target="_blank">
+            <a
+              class="inline-flex items-center font-medium no-underline underline-offset-2 hover:underline"
+              href={item.url}
+              rel="noreferrer"
+              target="_blank"
+            >
               {item.company}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
