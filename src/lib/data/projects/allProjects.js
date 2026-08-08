@@ -3,6 +3,7 @@ const lucyLogo = "/assets/projects/lucyLogo.png";
 const mozartIcon = "/assets/projects/mozart.jpg";
 const emersonIcon = "/assets/projects/emerson.jpg";
 const creativeChroniclesIcon = "/assets/projects/creativechronicles.png";
+const copyPandaIcon = "/assets/projects/copypanda.png";
 
 export const ALL_PROJECTS = [
   {
@@ -225,26 +226,25 @@ export const ALL_PROJECTS = [
     demoURL: "https://openpilot.garza.ca/",
     videoURLs: ["https://www.loom.com/embed/e7861f2ea4ef4758acbfc50bf93e62ac"],
   },
-  // {
-  //   title: "Copy Panda",
-  //   description: "Save collections of message templates for quick access.",
-  //   imagePath: copyPandaIcon,
-  //   tools: [
-  //     "React",
-  //     "Netlify",
-  //     "Google Login",
-  //     "Web Storage API",
-  //     "Node/Express",
-  //     "Heroku",
-  //     "PostgreSQL",
-  //     "Sendgrid",
-  //   ],
-  //   extendedDescription: `A web app to create message templates, like "Hey {FirstName}, checking in for our morning meeting today. Ready to go?", with the ability to copy them instantly into any input on any site.`,
-  //   repositoryURL: "",
-  //   // demoURL: "https://copypanda.co",
-  //   demoURL: "",
-  //   videoURLs: ["https://www.loom.com/embed/ac1712d5e9f546598ec68a5a287f63bb"],
-  // },
+  {
+    title: "Copy Panda",
+    description: "Save collections of message templates for quick access.",
+    imagePath: copyPandaIcon,
+    tools: [
+      "React",
+      "Vite",
+      "Cloudflare Pages",
+      "Node/Express",
+      "Railway",
+      "PostgreSQL",
+      "SendGrid",
+    ],
+    extendedDescription:
+      'A web app to create reusable message templates, like "Hey {FirstName}, checking in for our morning meeting today. Ready to go?", with the ability to copy them instantly into any input on any site.',
+    repositoryURL: "",
+    demoURL: "https://copypanda.garza.ca",
+    videoURLs: ["https://www.loom.com/embed/ac1712d5e9f546598ec68a5a287f63bb"],
+  },
   // {
   //   title: "Recruit Fruit",
   //   description:
