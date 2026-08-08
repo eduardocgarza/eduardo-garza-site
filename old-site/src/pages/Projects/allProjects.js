@@ -113,7 +113,7 @@ export const ALL_PROJECTS = [
       "Docker",
     ],
     repositoryURL: "",
-    demoURL: "",
+    demoURL: "http://lucyscircle.com",
     videoURLs: [
       "https://www.youtube.com/embed/8WA_Gp62gvE",
       "https://www.youtube.com/embed/iB3z9FiYp-M",
@@ -157,7 +157,7 @@ export const ALL_PROJECTS = [
       "top manufacturers",
     ],
     repositoryURL: "",
-    demoURL: "",
+    demoURL: "http://mozartpianos.com",
     videoURLs: [
       "https://www.youtube.com/embed/agvqiroXbkw",
       "https://www.youtube.com/embed/w8VtKCQjMUs",
