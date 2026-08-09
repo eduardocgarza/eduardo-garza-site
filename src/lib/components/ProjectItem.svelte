@@ -3,8 +3,21 @@
   import ProjectBulletList from "$lib/components/ProjectBulletList.svelte";
   import ProjectButtonBlue from "$lib/components/ProjectButtonBlue.svelte";
   import ProjectButtonRed from "$lib/components/ProjectButtonRed.svelte";
+  import ProjectVideoEmbed from "$lib/components/ProjectVideoEmbed.svelte";
 
   let { project } = $props();
+
+  const videoURLs = $derived(project?.videoURLs?.filter(Boolean) ?? []);
+
+  function isYoutubeVideoURL(value = "") {
+    try {
+      const hostname = new URL(value).hostname;
+
+      return hostname.includes("youtube.com") || hostname.includes("youtube-nocookie.com") || hostname.includes("youtu.be");
+    } catch {
+      return false;
+    }
+  }
 </script>
 
 {#if project?.title}
@@ -95,15 +108,22 @@
       </section>
     </section>
 
-    {#if project.videoURLs?.length > 0}
-      {#each project.videoURLs as videoURL, index (videoURL)}
+    {#if videoURLs.length > 0}
+      {#each videoURLs as videoURL, index (videoURL)}
         <section class="mt-10 flex items-center justify-center">
-          <iframe
-            allowfullscreen
-            src={videoURL}
-            title={`${project.title} ${index + 1}`}
-            class="h-[300px] w-[450px] rounded-2xl"
-          ></iframe>
+          {#if isYoutubeVideoURL(videoURL)}
+            <ProjectVideoEmbed src={videoURL} title={`${project.title} ${index + 1}`} />
+          {:else}
+            <iframe
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              class="aspect-video w-full max-w-[560px] rounded-2xl"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              src={videoURL}
+              title={`${project.title} ${index + 1}`}
+            ></iframe>
+          {/if}
         </section>
       {/each}
     {/if}
