@@ -110,12 +110,7 @@ export const ALL_PROJECTS = [
     ],
     repositoryURL: "",
     demoURL: "https://lucyscircle.com",
-    videoURLs: [
-      "https://www.youtube.com/embed/8WA_Gp62gvE",
-      "https://www.youtube.com/embed/iB3z9FiYp-M",
-      "https://www.youtube.com/embed/weS-TchWAY4",
-      "https://www.youtube.com/embed/z0TiDl2QGrM",
-    ],
+    videoURLs: ["https://www.youtube.com/embed/8WA_Gp62gvE"],
   },
   {
     title: "Mozart",
@@ -154,10 +149,7 @@ export const ALL_PROJECTS = [
     ],
     repositoryURL: "",
     demoURL: "https://mozartpianos.com",
-    videoURLs: [
-      "https://www.youtube.com/embed/agvqiroXbkw",
-      "https://www.youtube.com/embed/w8VtKCQjMUs",
-    ],
+    videoURLs: ["https://www.youtube.com/embed/agvqiroXbkw"],
   },
   {
     title: "Emerson Academy",

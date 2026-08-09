@@ -27,7 +27,7 @@
             <section class="mb-2 flex flex-wrap justify-center md:justify-start">
               {#each project.tools as toolName (toolName)}
                 <p
-                  class="mb-2 mr-1 cursor-pointer rounded-full bg-gray-200 px-2 py-1 text-xs text-gray-700 transition duration-500 ease-in-out hover:bg-gray-300"
+                  class="mb-2 mr-1 cursor-pointer rounded-full border border-gray-200 bg-white px-2 py-1 text-xs text-gray-700 transition duration-500 ease-in-out hover:bg-gray-50"
                 >
                   {toolName}
                 </p>
