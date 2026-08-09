@@ -24,7 +24,7 @@ export default function AboutPage() {
 
   const workExperience = [
     {
-      role: "Software Lead",
+      role: "Founder",
       company: "Lucy's Circle",
       dates: "December 2024 to May 2026 (1 year 6 months)",
       description:
@@ -49,7 +49,7 @@ export default function AboutPage() {
       url: "https://springfinancial.ca",
     },
     {
-      role: "AI Instructor & Consultant",
+      role: "AI Instructor",
       company: "Emerson Academy",
       dates: "2023 to 2026 (4 years)",
       description:
