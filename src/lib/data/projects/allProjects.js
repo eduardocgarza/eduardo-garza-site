@@ -1,6 +1,7 @@
 const commaIcon = "/assets/projects/commaai.jpg";
 const lucyLogo = "/assets/projects/lucyLogo.png";
 const mozartIcon = "/assets/projects/mozart.jpg";
+const superduperVideosIcon = "/assets/projects/superdupervideos.png";
 const emersonIcon = "/assets/projects/emerson.jpg";
 const creativeChroniclesIcon = "/assets/projects/creativechronicles.png";
 const copyPandaIcon = "/assets/projects/copypanda.png";
@@ -150,6 +151,72 @@ export const ALL_PROJECTS = [
     repositoryURL: "",
     demoURL: "https://mozartpianos.com",
     videoURLs: ["https://www.youtube.com/embed/agvqiroXbkw"],
+  },
+  {
+    title: "Super Duper Videos",
+    description: "Loom-style YouTube embeds and video marketing platform",
+    imagePath: superduperVideosIcon,
+    tools: [
+      "SvelteKit",
+      "React",
+      "Node/Express",
+      "PostgreSQL",
+      "Cloudflare",
+      "Railway",
+      "R2",
+      "Stripe",
+    ],
+    extendedDescription:
+      "A full-stack video platform that turns YouTube videos into polished, brandable website embeds with generated thumbnails, muted hover previews, origin controls, account dashboards, and production-ready marketing, auth, billing, and deployment surfaces.",
+    bulletPointSections: [
+      {
+        title: "Media Pipeline",
+        items: [
+          "YouTube Data API for metadata ingestion and thumbnail selection.",
+          "yt-dlp, ffmpeg, and ffprobe for preview clips, timeline sprites, editor proxy media, and asset metadata.",
+          "S3-compatible local object storage with public/private Cloudflare R2 buckets and CDN hostnames for staged media delivery.",
+        ],
+      },
+      {
+        title: "Application Stack",
+        items: [
+          "Better Auth, TanStack Query, Axios, Tailwind CSS 4, DaisyUI, and lucide icons across the web app and dashboard.",
+          "Flyway migrations, React Email, Resend, Twilio, and Stripe-ready monetization for production account and billing flows.",
+        ],
+      },
+    ],
+    highlightTerms: [
+      "YouTube videos",
+      "brandable website embeds",
+      "generated thumbnails",
+      "muted hover previews",
+      "origin controls",
+      "account dashboards",
+      "marketing",
+      "auth",
+      "billing",
+      "YouTube Data API",
+      "yt-dlp",
+      "ffmpeg",
+      "ffprobe",
+      "timeline sprites",
+      "S3-compatible local object storage",
+      "Cloudflare R2",
+      "Tailwind CSS 4",
+      "DaisyUI",
+      "lucide icons",
+      "Axios",
+      "Better Auth",
+      "TanStack Query",
+      "Flyway",
+      "React Email",
+      "Resend",
+      "Twilio",
+      "Stripe",
+    ],
+    repositoryURL: "https://github.com/eduardocgarza/superdupervideos-web",
+    demoURL: "https://superdupervideos.com",
+    videoURLs: [],
   },
   {
     title: "Emerson Academy",
