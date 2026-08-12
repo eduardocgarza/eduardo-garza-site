@@ -111,7 +111,7 @@ export const ALL_PROJECTS = [
     ],
     repositoryURL: "",
     demoURL: "https://lucyscircle.com",
-    videoURLs: ["https://www.youtube.com/embed/8WA_Gp62gvE"],
+    videoURLs: ["https://api.superdupervideos.com/embed/v1/frame/ve_mUa-WQgYNdSNpDWj6DGPT5lM"],
   },
   {
     title: "Mozart",
@@ -150,7 +150,7 @@ export const ALL_PROJECTS = [
     ],
     repositoryURL: "",
     demoURL: "https://mozartpianos.com",
-    videoURLs: ["https://www.youtube.com/embed/agvqiroXbkw"],
+    videoURLs: ["https://api.superdupervideos.com/embed/v1/frame/ve_lMA0tzfzcdIl--pgxJFMryrL"],
   },
   {
     title: "Super Duper Videos",
@@ -270,7 +270,6 @@ export const ALL_PROJECTS = [
       "Get the YouTube videos of inventors, founders, and key executives at top companies in chronological order, understanding their evolving ideas and advice throughout their own careers.",
     repositoryURL:
       "https://github.com/eduardocgarza/app-public-creativechronicles-client",
-    demoURL: "https://creativechronicles.garza.ca",
     videoURLs: ["https://www.loom.com/embed/5601229e3fbe4d6ab8c9b795ab5e80c3"],
   },
   {
@@ -301,7 +300,6 @@ export const ALL_PROJECTS = [
     extendedDescription:
       'A web app to create reusable message templates, like "Hey {FirstName}, checking in for our morning meeting today. Ready to go?", with the ability to copy them instantly into any input on any site.',
     repositoryURL: "",
-    demoURL: "https://copypanda.garza.ca",
     videoURLs: ["https://www.loom.com/embed/ac1712d5e9f546598ec68a5a287f63bb"],
   },
   // {
