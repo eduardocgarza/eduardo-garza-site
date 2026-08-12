@@ -214,7 +214,7 @@ export const ALL_PROJECTS = [
       "Twilio",
       "Stripe",
     ],
-    repositoryURL: "https://github.com/eduardocgarza/superdupervideos-web",
+    repositoryURL: "",
     demoURL: "https://superdupervideos.com",
     videoURLs: [],
   },
@@ -249,6 +249,10 @@ export const ALL_PROJECTS = [
     repositoryURL: "",
     demoURL: "https://emersonacademy.org",
     videoURLs: [
+      "https://api.superdupervideos.com/embed/v1/frame/ve_jlhOgH5cSdudv9euCUnSf9RA",
+      "https://api.superdupervideos.com/embed/v1/frame/ve_Fv57cCxglg_OzHt0Tu1_Y9N7",
+    ],
+    hiddenVideoURLs: [
       "https://www.youtube.com/embed/q91W_FFr4NI",
       "https://www.youtube.com/embed/CxcMokdLUQ0",
     ],
