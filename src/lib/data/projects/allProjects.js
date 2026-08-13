@@ -154,6 +154,7 @@ export const ALL_PROJECTS = [
   },
   {
     title: "Super Duper Videos",
+    hidden: true,
     description: "Loom-style YouTube embeds and video marketing platform",
     imagePath: superduperVideosIcon,
     tools: [
