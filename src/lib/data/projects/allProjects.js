@@ -274,7 +274,10 @@ export const ALL_PROJECTS = [
       "Get the YouTube videos of inventors, founders, and key executives at top companies in chronological order, understanding their evolving ideas and advice throughout their own careers.",
     repositoryURL:
       "https://github.com/eduardocgarza/app-public-creativechronicles-client",
-    videoURLs: ["https://www.loom.com/embed/5601229e3fbe4d6ab8c9b795ab5e80c3"],
+    videoURLs: [
+      "https://api.superdupervideos.com/embed/v1/frame/ve_LcvzEb2jj89XuplKORavrAg4",
+    ],
+    hiddenVideoURLs: ["https://www.loom.com/embed/5601229e3fbe4d6ab8c9b795ab5e80c3"],
   },
   {
     title: "Comma.ai OpenPilot Dashboard",
@@ -286,7 +289,10 @@ export const ALL_PROJECTS = [
     repositoryURL:
       "https://github.com/eduardocgarza/openpilot-dashboard-comma.ai",
     demoURL: "https://openpilot.garza.ca/",
-    videoURLs: ["https://www.loom.com/embed/e7861f2ea4ef4758acbfc50bf93e62ac"],
+    videoURLs: [
+      "https://api.superdupervideos.com/embed/v1/frame/ve_NDXMN279KAPT_4BvXwVZ7atw",
+    ],
+    hiddenVideoURLs: ["https://www.loom.com/embed/e7861f2ea4ef4758acbfc50bf93e62ac"],
   },
   {
     title: "Copy Panda",
@@ -304,7 +310,10 @@ export const ALL_PROJECTS = [
     extendedDescription:
       'A web app to create reusable message templates, like "Hey {FirstName}, checking in for our morning meeting today. Ready to go?", with the ability to copy them instantly into any input on any site.',
     repositoryURL: "",
-    videoURLs: ["https://www.loom.com/embed/ac1712d5e9f546598ec68a5a287f63bb"],
+    videoURLs: [
+      "https://api.superdupervideos.com/embed/v1/frame/ve_ms6Fj3LOiNTwehmmDQ9FevcD",
+    ],
+    hiddenVideoURLs: ["https://www.loom.com/embed/ac1712d5e9f546598ec68a5a287f63bb"],
   },
   // {
   //   title: "Recruit Fruit",
