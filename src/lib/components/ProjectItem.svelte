@@ -1,4 +1,7 @@
 <script>
+  import { ChevronDown, ChevronUp } from "@lucide/svelte";
+  import { cubicInOut } from "svelte/easing";
+  import { slide } from "svelte/transition";
   import HighlightedText from "$lib/components/HighlightedText.svelte";
   import ProjectBulletList from "$lib/components/ProjectBulletList.svelte";
   import ProjectButtonBlue from "$lib/components/ProjectButtonBlue.svelte";
@@ -6,7 +9,14 @@
   import ProjectVideoEmbed from "$lib/components/ProjectVideoEmbed.svelte";
 
   let { project } = $props();
+  let detailsVisible = $state(false);
 
+  const hasDetails = $derived(
+    Boolean(project?.bulletPoints?.length || project?.bulletPointSections?.length),
+  );
+  const detailsId = $derived(
+    `project-${project?.title?.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}-details`,
+  );
   const videoURLs = $derived(project?.videoURLs?.filter(Boolean) ?? []);
 
   function isYoutubeVideoURL(value = "") {
@@ -84,26 +94,48 @@
           <HighlightedText text={project.extendedDescription} highlightTerms={project.highlightTerms || []} />
         </p>
 
-        <ProjectBulletList
-          bulletPoints={project.bulletPoints || []}
-          highlightTerms={project.highlightTerms || []}
-        />
+        {#if hasDetails}
+          <button
+            aria-controls={detailsId}
+            aria-expanded={detailsVisible}
+            class="mt-2 flex w-full items-center justify-center gap-1 py-3 text-center text-xs font-medium uppercase tracking-wide text-gray-500 transition-colors duration-200 hover:text-gray-700 focus-visible:rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2"
+            type="button"
+            onclick={() => (detailsVisible = !detailsVisible)}
+          >
+            <span>{detailsVisible ? "Hide details" : "Show details"}</span>
+            {#if detailsVisible}
+              <ChevronUp aria-hidden="true" size={14} strokeWidth={2} />
+            {:else}
+              <ChevronDown aria-hidden="true" size={14} strokeWidth={2} />
+            {/if}
+          </button>
 
-        {#if project.bulletPointSections?.length}
-          <section class="mt-3 space-y-3">
-            {#each project.bulletPointSections as bulletPointSection (bulletPointSection.title)}
-              <section>
-                <h3 class="mb-1 text-[11px] font-semibold uppercase text-gray-400">
-                  {bulletPointSection.title}
-                </h3>
-                <ProjectBulletList
-                  bulletPoints={bulletPointSection.items}
-                  className=""
-                  highlightTerms={project.highlightTerms || []}
-                />
-              </section>
-            {/each}
-          </section>
+          {#if detailsVisible}
+            <section id={detailsId} transition:slide={{ duration: 500, easing: cubicInOut }}>
+              <ProjectBulletList
+                bulletPoints={project.bulletPoints || []}
+                className=""
+                highlightTerms={project.highlightTerms || []}
+              />
+
+              {#if project.bulletPointSections?.length}
+                <section class="space-y-3">
+                  {#each project.bulletPointSections as bulletPointSection (bulletPointSection.title)}
+                    <section>
+                      <h3 class="mb-1 text-[11px] font-semibold uppercase text-gray-400">
+                        {bulletPointSection.title}
+                      </h3>
+                      <ProjectBulletList
+                        bulletPoints={bulletPointSection.items}
+                        className=""
+                        highlightTerms={project.highlightTerms || []}
+                      />
+                    </section>
+                  {/each}
+                </section>
+              {/if}
+            </section>
+          {/if}
         {/if}
       </section>
     </section>
