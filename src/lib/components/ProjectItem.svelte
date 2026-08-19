@@ -158,7 +158,7 @@
             <ProjectVideoEmbed src={videoURL} title={`${project.title} ${index + 1}`} />
           {:else}
             <iframe
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
               class="aspect-video w-full max-w-[560px] rounded-2xl transition-[height] duration-200 ease-in-out"
               data-sdv-frame="1"

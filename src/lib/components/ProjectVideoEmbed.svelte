@@ -54,7 +54,7 @@
 <div class="relative aspect-video w-full max-w-[560px] overflow-hidden rounded-2xl bg-gray-950 shadow-sm">
   {#if isActive}
     <iframe
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
       class={`absolute inset-0 h-full w-full transition-opacity duration-200 ${
         hasFrameLoaded ? "opacity-100" : "opacity-0"
