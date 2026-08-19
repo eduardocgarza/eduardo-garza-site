@@ -8,6 +8,7 @@
 <svelte:head>
   <title>Eduardo Garza - Vancouver, Canada</title>
   <meta name="description" content="Eduardo Garza - Portfolio - Vancouver, Canada" />
+  <script async src="https://embed.superdupervideos.com/v1/coordinator.js"></script>
 </svelte:head>
 
 <section>

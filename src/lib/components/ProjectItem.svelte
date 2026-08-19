@@ -28,6 +28,17 @@
       return false;
     }
   }
+
+  function getCoordinatedFrameURL(value = "") {
+    try {
+      const url = new URL(value);
+      url.searchParams.set("coordination", "1");
+
+      return url.toString();
+    } catch {
+      return value;
+    }
+  }
 </script>
 
 {#if project?.title}
@@ -149,10 +160,11 @@
             <iframe
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen
-              class="aspect-video w-full max-w-[560px] rounded-2xl"
+              class="aspect-video w-full max-w-[560px] rounded-2xl transition-[height] duration-200 ease-in-out"
+              data-sdv-frame="1"
               loading="lazy"
               referrerpolicy="strict-origin-when-cross-origin"
-              src={videoURL}
+              src={getCoordinatedFrameURL(videoURL)}
               title={`${project.title} ${index + 1}`}
             ></iframe>
           {/if}
