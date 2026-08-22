@@ -1,5 +1,6 @@
 const commaIcon = "/assets/projects/commaai.jpg";
 const lucyLogo = "/assets/projects/lucyLogo.png";
+const valorLogo = "/assets/projects/valor.png";
 const mozartIcon = "/assets/projects/mozart.jpg";
 const superduperVideosIcon = "/assets/projects/superdupervideos.png";
 const emersonIcon = "/assets/projects/emerson.jpg";
@@ -7,6 +8,39 @@ const creativeChroniclesIcon = "/assets/projects/creativechronicles.png";
 const copyPandaIcon = "/assets/projects/copypanda.png";
 
 export const ALL_PROJECTS = [
+  {
+    title: "Valor",
+    description: "Audio-first personal development for men",
+    imagePath: valorLogo,
+    tools: [
+      "SvelteKit (Web)",
+      "Expo / React Native (Mobile)",
+      "Node/Express",
+      "PostgreSQL",
+      "Cloudflare",
+      "Railway",
+    ],
+    extendedDescription:
+      "A structured personal-development platform with short guided audio courses, practical exercises, progress tracking, and a saved-content library across the web and native iOS and Android apps.",
+    bulletPoints: [
+      "Built a SvelteKit web app and Expo/React Native iOS and Android apps on a shared Node/Express and PostgreSQL backend.",
+      "Created the core audio course experience: discovery, playback, progress, completion, and saves.",
+      "Added a separate catalog admin app and Free/Premium private audio access.",
+    ],
+    highlightTerms: [
+      "guided audio courses",
+      "progress tracking",
+      "saved-content library",
+      "SvelteKit web app",
+      "Expo/React Native iOS and Android apps",
+      "audio course experience",
+      "catalog admin app",
+      "Free/Premium private audio access",
+    ],
+    repositoryURL: "",
+    demoURL: "https://valorlegion.app",
+    videoURLs: [],
+  },
   {
     title: "Lucy’s Circle",
     description: "Childcare discovery and marketplace platform",
